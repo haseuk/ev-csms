@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>장비별 세부 : 디스펜서</h3>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="">통합모니터링</a></li>
+            <li><a href="">통합관리자 설정</a></li>
+            <li><a href="">차고지 현황</a></li>
+            <li class="active"><a href="">장비별 세부</a>
+              <ul class="depth2">
+                <li class="active"><a href=""><i></i> 디스펜서</a></li>
+                <li><a href=""><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="">조회</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 차량/충전기별 조회</a></li>
+                <li><a href=""><i></i> 전력 조회</a></li>
+                <li><a href=""><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 일간</a></li>
+                <li><a href=""><i></i> 월간</a></li>
+                <li><a href=""><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="">설정</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 차량 설정</a></li>
+                <li><a href=""><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href=""><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="e-power">
+          <div class="cont-wrap">
+            <div class="current">
+              <h3>현재 소비전력</h3>
+              <div class="power-view">
+                <p><i></i> 현재 전력</p>
+                <p><span>139.0</span> kW</p>
+              </div>
+              <div class="power-view">
+                <p><i></i> 목표 전력</p>
+                <p><span>350.0</span> kW</p>
+              </div>
+              <div class="graph1">
+                <canvas id="current-chart"></canvas>
+              </div>
+            </div>
+            <div class="min15">
+              <h3>15분 단위 소비전력 분석</h3>
+              <div class="graph2">
+                <canvas id="min15-chart"></canvas>
+              </div>
+              <ul>
+                <li><span></span> 기준 전력 <p><s>244.0</s> kW</p></li>
+                <li><span></span> 목표 전력 <p><s>350.0</s> kW</p></li>
+                <li><span></span> 예상 전력 <p><s>80.0</s> kW</p></li>
+                <li><span></span> 15분 전 전력 <p><s>124.0</s> kW</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cont-wrap">
+            <div class="inner">
+
+              <div class="genealogy">
+                <h3>계통도</h3>
+                <div class="gen-inner">
+                  <div class="kepco">
+                    <img src="img/kepco.png" alt="">
+                  </div>
+                  <div class="cont-box cont-box1">
+                    <p class="tit">현재 부하량</p>
+                    <p class="txt"><span>1,651.2</span> kWh</p>
+                  </div>
+                  <span class="on active">ON</span>
+                  <span class="off">OFF</span>
+                  <div class="pic">
+                    <img src="img/pic.png" alt="">
+                  </div>
+                  <div class="cont-box cont-box2">
+                    <p class="tit">VCB</p>
+                    <p class="txt"><span>580</span> kW</p>
+                  </div>
+                  <div class="acb-wrap">
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+
+<!--indicator 클래스에 charging, repair, full 클래스 추가에 따라 충전중, 고장/수리, 충전완료로 바뀜-->
+                        <div class="indicator charging">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator repair">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+                        <div class="indicator charging">
+                          <span class="num">2</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator full">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+                        <div class="indicator charging">
+                          <span class="num">2</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator full">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="today-status">
+              <div class="cell">
+                <h3>일일 현황</h3>
+              </div>
+              <div class="cell">
+                <p>경부하 <span>KW</span></p>
+                <div class="bar"><span style="width: 50%"></span></div>
+              </div>
+              <div class="cell">
+                <p>중부하 <span>KW</span></p>
+                <div class="bar"><span style="width: 80%"></span></div>
+              </div>
+              <div class="cell">
+                <p>최대부하 <span>KW</span></p>
+                <div class="bar"><span style="width: 30%"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script>
+    let data1 = [100,90,120,110,90,80,100,120,130,110,100,120]
+    let data2 = [350,350,350,350,350,350,350,350,350,350,350]
+
+    new Chart(document.getElementById("current-chart"), {
+      type: 'line',
+      data: {
+        labels: [0,5,10,15,20,25,30,35,40,45,50],
+        datasets: [
+          {
+            borderColor: "#c50000",
+            data: data1,
+            fill: false,
+          },
+          {
+            borderColor: "#ffd350",
+            data: data2,
+            fill: false,
+          }
+        ]
+      },
+      options: {
+        responsive: false,
+        legend: {
+          display: false
+        }
+      }
+    });
+
+    let data3 = [0,50,100,150,200,250,250,250,250,250]
+    let data4 = [0,25,45,60,70,80,90,100,100,100]
+    let data5 = [125,125,125,125,125,125,125,125,125,125]
+
+    new Chart(document.getElementById("min15-chart"), {
+      type: 'line',
+      data: {
+        labels: [1,92,183,274,365,456,547,638,729,820],
+        datasets: [
+          {
+            borderColor: "#115abc",
+            data: data3,
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#ffd350",
+            data: data2,
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#65be93",
+            data: data4,
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#cd549e",
+            data: data5,
+            pointRadius: 0,
+            fill: false,
+          }
+        ]
+      },
+      options: {
+        responsive: false,
+        legend: {
+          display: false
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

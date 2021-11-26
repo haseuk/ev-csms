@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>설정 : 차량 설정</h3>
+          <a href="" class="area-name">서울 보성운수 차고지 정보 ></a>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="">통합모니터링</a></li>
+            <li><a href="">통합관리자 설정</a></li>
+            <li><a href="">차고지 현황</a></li>
+            <li><a href="">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 디스펜서</a></li>
+                <li><a href=""><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="">조회</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 차량/충전기별 조회</a></li>
+                <li><a href=""><i></i> 전력 조회</a></li>
+                <li><a href=""><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href=""><i></i> 일간</a></li>
+                <li><a href=""><i></i> 월간</a></li>
+                <li><a href=""><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="">설정</a>
+              <ul class="depth2">
+                <li class="active"><a href=""><i></i> 차량 설정</a></li>
+                <li><a href=""><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href=""><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="car-regist">
+          <h2>차량 등록</h2>
+          <ul>
+            <li>
+              <p>차대번호</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>차량번호</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>제조사</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>모델명</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li class="batter-vol">
+              <p>배터리용량</p>
+              <div class="li-inner">
+                <input type="text">
+                <p>kWh</p>
+              </div>
+            </li>
+            <li>
+              <p>배터리 모듈수량</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>노선번호</p>
+              <div class="li-inner">
+                <div class="select">
+                  <select>
+                    <option value="">노선번호 253</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="batter-sn">
+              <p>배터리</p>
+              <div class="li-inner">
+                <div class="select">
+                  <select>
+                    <option value=""></option>
+                  </select>
+                </div>
+                <a class="btn">등록</a>
+                <div class="sn-list">
+                  <a class="on">X <s></s> 배터리용량_시리얼번호</a>
+                  <a class="on">X <s></s> 배터리용량_시리얼번호</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="btns">
+            <a class="btn">취소</a>
+            <a class="btn">등록</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script>
+    let snList = document.querySelectorAll('.sn-list a')
+    Array.prototype.forEach.call(snList, function(e) {
+      e.addEventListener('click', function() {
+        e.classList.remove('on');
+      })
+    });
+  </script>
+</body>
+</html>
+

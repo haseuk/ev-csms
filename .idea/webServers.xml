@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="39892fbf-280e-4a66-8a73-2346650d5c7e" name="ev-csms" url="http://ev-csms.devcraft.kr">
+        <fileTransfer rootFolder="/var/www/ev-csms" accessType="SFTP" host="devcraft.kr" port="22" sshConfigId="e6318cdd-f7cc-4bd0-8e4d-61e21868ee0a" sshConfig="root@devcraft.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

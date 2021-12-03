@@ -37,6 +37,11 @@ a {
   border-radius: 0.22222222rem;
   background-color: #999;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .contain .wrap {
   font-size: 0rem;
   text-align: center;
@@ -204,7 +209,7 @@ a {
   box-sizing: border-box;
   position: absolute;
   left: 50%;
-  top: 2.05555556rem;
+  top: 1.66666667rem;
   right: auto;
   bottom: auto;
   margin-left: -53.33333333rem;
@@ -309,6 +314,37 @@ a {
 .contain .wrap article section {
   background-color: #f4f4f3;
   min-height: 48.88888889rem;
+}
+.contain .wrap article section .manage-menu {
+  border-radius: 0.22222222rem;
+  width: 78.88888889rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contain .wrap article section .manage-menu .menu-ul li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  height: 3.88888889rem;
+  padding-top: 0.27777778rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section .manage-menu .menu-ul li a {
+  font-size: 1.33333333rem;
+  color: #115abc;
+  font-weight: 500;
+  width: 100%;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background-color: #fff;
+}
+.contain .wrap article section .manage-menu .menu-ul li.on {
+  background-color: #003882;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section .manage-menu .menu-ul li.on a {
+  color: #fff;
+  background-color: #003882;
 }
 .contain .wrap article section.login-wrap {
   height: calc(100vh - 80px);
@@ -779,6 +815,12 @@ a {
 .contain .wrap article section.integrated .map-wrap .map-view span.check {
   background-color: #ff9c00;
 }
+.contain .wrap article section.integrated .map-wrap .map-view span.not-install {
+  background: transparent;
+}
+.contain .wrap article section.integrated .map-wrap .map-view span.not-install:after {
+  color: #999;
+}
 .contain .wrap article section.integrated .map-wrap .map-view span.area1 {
   left: 3.33333333rem;
   top: 9.61111111rem;
@@ -991,6 +1033,7 @@ a {
   border-radius: 0.22222222rem;
   width: 25rem;
   height: calc(100vh - 140px);
+  min-height: 47.77777778rem;
   padding-top: 1.11111111rem;
   padding-right: 1.5rem;
   padding-bottom: 1.11111111rem;
@@ -1383,12 +1426,14 @@ a {
 .contain .wrap article section.integrated.car-list .garage .select {
   display: inline-block;
   width: 6.83333333rem;
-  height: 2.16666667rem;
+  height: 2.22222222rem;
   position: absolute;
   right: 15rem;
   top: 0rem;
   left: auto;
   bottom: auto;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
 }
 .contain .wrap article section.integrated.car-list .garage .select:after {
   content: '';
@@ -1403,15 +1448,20 @@ a {
   top: 0.72222222rem;
   left: auto;
   bottom: auto;
+  pointer-events: none;
 }
 .contain .wrap article section.integrated.car-list .garage .select select {
   font-size: 1rem;
   font-weight: 500;
   color: #333;
-  border: 1px solid #d6d6d6;
-  width: 100%;
-  height: 100%;
-  padding-left: 1.94444444rem;
+  width: 6.27777778rem;
+  height: 2.22222222rem;
+  text-align: center;
+  border: 0;
+  padding-top: 0rem;
+  padding-right: 0.55555556rem;
+  padding-bottom: 0rem;
+  padding-left: 0.55555556rem;
   box-sizing: border-box;
 }
 .contain .wrap article section.integrated.car-list .garage ul li p:nth-child(1) {
@@ -1561,34 +1611,40 @@ a {
   vertical-align: middle;
   margin-left: 1.11111111rem;
 }
+.contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell .btn {
+  background-color: #115abc;
+}
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(1) {
   font-weight: 700;
-  width: 13.2%;
+  width: 14%;
 }
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(1) p {
   font-weight: 700;
 }
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(2) {
   font-weight: 700;
+  width: 25%;
 }
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(2) input {
-  width: 67%;
+  width: 60%;
+}
+.contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(3) {
+  width: 28%;
 }
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(3) input {
-  width: 41%;
+  width: 42%;
   margin-right: 0.55555556rem;
 }
+.contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(4) {
+  width: 20%;
+}
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(4) input {
-  width: 52%;
+  width: 42%;
 }
 .contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(5) {
-  width: 11%;
-  margin-right: 0rem;
+  width: 12%;
   padding-top: 0.55555556rem;
   box-sizing: border-box;
-}
-.contain .wrap article section.integrated.car-list.bank .garage .bank-add .add-inner .cell:nth-child(5) .btn {
-  background-color: #115abc;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list h2 {
   font-weight: 500;
@@ -1602,27 +1658,851 @@ a {
   background-color: #115abc;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list ul li p:nth-child(1) {
-  width: 4.6%;
+  width: 5%;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list ul li p:nth-child(2) {
-  width: 4.6%;
+  width: 5%;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list ul li p:nth-child(3) {
-  width: 61%;
+  width: 50%;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list ul li p:nth-child(4) {
-  width: 29.8%;
+  width: 20%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list ul li p:nth-child(5) {
+  width: 20%;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list ul li label {
-  width: 4.6%;
+  width: 5%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell {
+  width: 25%;
+  height: 3.33333333rem;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.2%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell p {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 3.33333333rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell input {
+  font-size: 1.11111111rem;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+  height: 2.44444444rem;
+  line-height: 2.44444444rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1.11111111rem;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(1) {
+  font-weight: 700;
+  width: 14%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(1) p {
+  font-weight: 700;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(2) {
+  font-weight: 700;
+  width: 14%;
   text-align: left;
-  padding-left: 3.88888889rem;
-  box-sizing: border-box;
 }
 .contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(2) p {
   color: #115abc;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(3) {
+  width: 23%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(3) input {
+  width: 35%;
+  margin-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(4) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(4) input {
+  width: 33%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(5) {
+  width: 18%;
+  padding-top: 0rem;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(5) input {
+  width: 33%;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(6) {
+  width: 12%;
+  margin-right: 0rem;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.car-list.bank .dispenser-list .bank-add .add-inner .cell:nth-child(6) .btn {
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.management {
+  text-align: center;
+}
+.contain .wrap article section.integrated.management .garage {
+  text-align: left;
+  margin-left: 0rem;
+  width: 78.88888889rem;
+  margin-top: 1.66666667rem;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(1) {
+  width: 5%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(2) {
+  width: 5%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(3) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(4) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(5) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(6) {
+  width: 13%;
+}
+.contain .wrap article section.integrated.management .garage ul li p:nth-child(7) {
+  width: 23%;
+}
+.contain .wrap article section.integrated.management .garage ul li label {
+  width: 5%;
+}
+.contain .wrap article section.integrated.management .garage ul.comp li p:nth-child(3) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.comp li p:nth-child(4) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.comp li p:nth-child(5) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.comp li p:nth-child(6) {
+  width: 15%;
+}
+.contain .wrap article section.integrated.management .garage ul.comp li p:nth-child(7) {
+  width: 15%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(3) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(4) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(5) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(6) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(7) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.management .garage ul.garage-ul li p:nth-child(8) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.management .garage ul.batt-set li p:nth-child(3) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.batt-set li p:nth-child(4) {
+  width: 20%;
+}
+.contain .wrap article section.integrated.management .garage ul.batt-set li p:nth-child(5) {
+  width: 25%;
+}
+.contain .wrap article section.integrated.management .garage ul.batt-set li p:nth-child(6) {
+  width: 25%;
+}
+.contain .wrap article section.integrated.search {
+  text-align: center;
+  padding-top: 1.66666667rem;
+}
+.contain .wrap article section.integrated.search .garage {
+  width: 94.44444444rem;
+  margin-left: 0rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap {
+  text-align: left;
+  margin-bottom: 0.83333333rem;
+  margin-top: -0.44444444rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top {
+  position: relative;
+  border-bottom: 2px solid #fff;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.77777778rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  width: 5.55555556rem;
+  text-align: left;
+  padding-left: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input {
+  border: 1px solid #ddd;
+  width: 8.77777778rem;
+  height: 2.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  box-sizing: border-box;
+  right: 0rem;
+  margin-right: 0.44444444rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .select:after,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id:after,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id:after,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input:after {
+  content: '';
+  display: block;
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/ico-3.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.77777778rem;
+  top: 0.88888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .select select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .select input,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id input,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id input,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input input {
+  font-size: 0.88888889rem;
+  font-weight: 500;
+  color: #333;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  padding-right: 1.11111111rem;
+  padding-left: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id {
+  padding-left: 0rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-id:after,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id:after {
+  display: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .charger-select,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-select {
+  width: 9.44444444rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-id,
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .vehicle-select {
+  display: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input:after {
+  content: '';
+  display: block;
+  width: 1.83333333rem;
+  height: 1.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/date.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.72222222rem;
+  top: 0.38888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input input {
+  padding-left: 0.55555556rem;
+  text-align: left;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-input ::placeholder {
+  letter-spacing: -0.1em;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap span {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 1.05555556rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.44444444rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .s-wrap .date-search {
+  background-color: #115abc;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.66666667rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-top .download {
+  background-repeat: no-repeat;
+  background-image: url('../img/down-btn.png');
+  background-size: contain;
+  width: 7.22222222rem;
+  height: 2.22222222rem;
+  position: absolute;
+  right: 0rem;
+  bottom: 0.83333333rem;
+  left: auto;
+  top: auto;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate {
+  font-size: 0rem;
+  width: 49.5%;
+  margin-top: 0.77777778rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate .cell {
+  width: 49%;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0.22222222rem;
+  overflow: hidden;
+  margin-right: 2%;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate .cell p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  background-color: #fff;
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate .cell p:nth-child(1) {
+  width: 49%;
+  margin-right: 1%;
+  background-color: #b3cae8;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate .cell p:nth-child(2) {
+  width: 50%;
+  text-align: right;
+  padding-right: 1.11111111rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .accumulate .cell:last-child {
+  margin-right: 0rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy {
+  margin-bottom: 1.66666667rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul {
+  margin-top: 0rem;
+  height: 2.77777778rem;
+  text-align: center;
+  position: relative;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul:after {
+  content: '';
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  left: 0rem;
+  top: 0.55555556rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 1.66666667rem;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul li {
+  width: 10.77777778rem;
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0rem;
+  position: relative;
+  z-index: 1;
+  background: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul li a {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  color: #115abc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul li.on {
+  background-color: #003882;
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .dmy ul li.on a {
+  color: #fff;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-bar {
+  padding-bottom: 0.77777778rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-bar .select {
+  border: 1px solid #ddd;
+  width: 7.22222222rem;
+  height: 2.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-right: 0.44444444rem;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-bar .select:after {
+  content: '';
+  display: block;
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/ico-3.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.77777778rem;
+  top: 0.88888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-bar .select select {
+  font-size: 0.88888889rem;
+  font-weight: 500;
+  color: #333;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  padding-top: 0rem;
+  padding-right: 1.11111111rem;
+  padding-bottom: 0rem;
+  padding-left: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .top-wrap .search-bar .date-search {
+  background-color: #115abc;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.66666667rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul {
+  position: relative;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 {
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p {
+  font-size: 1.11111111rem;
+  color: #fff;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p.l-h {
+  line-height: 1;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p.l-h s {
+  font-size: 0.88888889rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(1) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(2) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(3) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(4) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(5) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(6) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(7) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(8) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(9) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24 p:nth-child(10) {
+  width: 17%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p24.vehicle-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 {
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p {
+  font-size: 1.11111111rem;
+  color: #fff;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.l-h {
+  line-height: 1;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.l-h s {
+  font-size: 0.88888889rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.r-l {
+  position: relative;
+  height: 3.33333333rem;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.r-l:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  left: auto;
+  bottom: auto;
+  width: 0.11111111rem;
+  height: 3.33333333rem;
+  background-color: #fff;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(1) {
+  width: 8%;
+  padding-top: 0rem;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(2) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(3) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(4) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(5) {
+  width: 24%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(6) {
+  width: 27%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p:nth-child(7) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.double-line {
+  font-size: 0.88888889rem;
+  line-height: 1;
+}
+.contain .wrap article section.integrated.search .garage .wrap-ul .ul-tit.p26 p.double-line s {
+  font-size: 1rem;
+  width: 33.3%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.27777778rem;
+}
+.contain .wrap article section.integrated.search .garage ul {
+  margin-top: 0.33333333rem;
+  height: 31rem;
+  overflow: auto;
+}
+.contain .wrap article section.integrated.search .garage ul li p {
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(1) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(2) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(3) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(4) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(5) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(6) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(7) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(8) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(9) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.search .garage ul li p:nth-child(10) {
+  width: 17%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap {
+  width: 49.5%;
+  height: 33.05555556rem;
+  margin-right: 0.5%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  padding-bottom: 0.83333333rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul {
+  text-align: center;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 {
+  width: 94%;
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+  border-radius: 0.22222222rem;
+  background-color: #b3cae8;
+  display: inline-block;
+  margin-top: 0.27777778rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p.l-h {
+  line-height: 1;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p.l-h s {
+  font-size: 0.88888889rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(1) {
+  width: 21%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(2) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(3) {
+  width: 23%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(4) {
+  width: 22%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(5) {
+  width: 22%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul {
+  width: 94%;
+  height: 27.77777778rem;
+  display: inline-block;
+  padding-bottom: 0.83333333rem;
+  overflow: auto;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li {
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 0rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li:first-child {
+  border-top: 0;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p {
+  font-size: 0.88888889rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p:nth-child(1) {
+  width: 21%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p:nth-child(2) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p:nth-child(3) {
+  width: 23%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p:nth-child(4) {
+  width: 22%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul li p:nth-child(5) {
+  width: 22%;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul.year-ul li {
+  height: 2.11111111rem;
+  line-height: 2.11111111rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul.year-ul li.tit {
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul.year-ul li.total {
+  border-top: 2px solid #b3cae8;
+}
+.contain .wrap article section.integrated.search .garage .ul-wrap .search-ul.year-ul li.total p {
+  color: #115abc;
+}
+.contain .wrap article section.integrated.search .garage .gra {
+  width: 50%;
+  height: 33.05555556rem;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.search .garage .gra canvas {
+  width: 98% !important;
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  margin-top: -25%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul {
+  height: 27.55555556rem;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(1) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(2) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(3) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(4) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(5) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(6) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(7) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(8) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(9) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(10) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .price-ul li p:nth-child(11) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total {
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  border-radius: 0.22222222rem;
+  background-color: #e2eefd;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(1) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(2) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(3) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(4) {
+  width: 11%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(5) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(6) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(7) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(8) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(9) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(10) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.search .garage .ul-total p:nth-child(11) {
+  width: 8%;
+}
+.contain .wrap article section.integrated.search .garage.vehicle .top-wrap .search-top .s-wrap .charger-id,
+.contain .wrap article section.integrated.search .garage.vehicle .top-wrap .search-top .s-wrap .charger-select {
+  display: none;
+}
+.contain .wrap article section.integrated.search .garage.vehicle .top-wrap .search-top .s-wrap .vehicle-id,
+.contain .wrap article section.integrated.search .garage.vehicle .top-wrap .search-top .s-wrap .vehicle-select {
+  display: inline-block;
+}
+.contain .wrap article section.integrated.search .garage.vehicle .wrap-ul .charger-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.search .garage.vehicle .wrap-ul .vehicle-tit {
+  display: inline-block !important;
+  width: 100%;
 }
 .contain .wrap article section.dispenser {
   height: calc(100vh - 80px);
@@ -1631,25 +2511,32 @@ a {
   box-sizing: border-box;
   position: relative;
   text-align: left;
+  overflow: hidden;
 }
 .contain .wrap article section.dispenser .charger-status {
   padding-top: 1.11111111rem;
   padding-right: 0.88888889rem;
-  padding-bottom: 0.38888889rem;
+  padding-bottom: 1.11111111rem;
   padding-left: 0.88888889rem;
   box-sizing: border-box;
   text-align: left;
   margin-left: 4.88888889rem;
   background-color: #fff;
   border-radius: 0.22222222rem;
-  display: inline-block;
   width: 16.66666667rem;
+  margin-bottom: 1.11111111rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
 }
 .contain .wrap article section.dispenser .charger-status h3 {
   font-size: 1.11111111rem;
   color: #333;
   font-weight: 700;
+  margin-top: 0.55555556rem;
+  margin-right: 0rem;
   margin-bottom: 1.11111111rem;
+  margin-left: 0rem;
 }
 .contain .wrap article section.dispenser .charger-status ul li {
   width: 100%;
@@ -1660,6 +2547,7 @@ a {
   padding-left: 0.55555556rem;
   box-sizing: border-box;
   zoom: 1;
+  border-bottom: 2px solid #f4f1e7;
 }
 .contain .wrap article section.dispenser .charger-status ul li:after {
   content: '';
@@ -1669,19 +2557,19 @@ a {
   height: 0;
   visibility: hidden;
 }
-.contain .wrap article section.dispenser .charger-status ul li:nth-child(1) {
+.contain .wrap article section.dispenser .charger-status ul li.list1 {
   background-color: #f4f4f3;
   border-radius: 0.22222222rem;
+  border-bottom: 0;
 }
 .contain .wrap article section.dispenser .charger-status ul li:nth-child(2) span s {
   color: #02881e;
 }
-.contain .wrap article section.dispenser .charger-status ul li:nth-child(3) {
-  border-top: 2px solid #f4f1e7;
-  border-bottom: 2px solid #f4f1e7;
-}
 .contain .wrap article section.dispenser .charger-status ul li:nth-child(4) span s {
   color: #ff9c00;
+}
+.contain .wrap article section.dispenser .charger-status ul li:last-child {
+  border-bottom: 0;
 }
 .contain .wrap article section.dispenser .charger-status ul li p,
 .contain .wrap article section.dispenser .charger-status ul li span {
@@ -1698,10 +2586,22 @@ a {
   display: inline-block;
   margin-right: 0.27777778rem;
 }
+.contain .wrap article section.dispenser .charger-status + .charger-status ul li {
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.dispenser .charger-status + .charger-status ul li span {
+  font-weight: 500;
+}
+.contain .wrap article section.dispenser .charger-status + .charger-status ul li span s {
+  color: #333;
+}
+.contain .wrap article section.dispenser .charger-status + .charger-status ul li.list1 {
+  margin-bottom: 0.22222222rem;
+}
 .contain .wrap article section.dispenser .remark-img {
   position: absolute;
-  left: 4.88888889rem;
-  bottom: 2.66666667rem;
+  left: 3.22222222rem;
+  bottom: 3.05555556rem;
   right: auto;
   top: auto;
   width: 18.27777778rem;
@@ -1710,15 +2610,10 @@ a {
 .contain .wrap article section.dispenser .dispenser-wrap {
   display: inline-block;
   vertical-align: top;
-  width: 62.22222222rem;
-  height: calc(100% - 30px);
-  padding-right: 5rem;
-  position: absolute;
-  left: 37.88888889rem;
-  top: 1.66666667rem;
-  right: auto;
-  bottom: auto;
+  width: 83.33333333rem;
+  height: 100%;
   overflow: auto;
+  margin-left: 1.11111111rem;
 }
 .contain .wrap article section.dispenser .dispenser-wrap::-webkit-scrollbar {
   width: 0.83333333rem;
@@ -1733,71 +2628,162 @@ a {
   width: 0.83333333rem;
   background: none;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell {
-  width: 30rem;
-  height: 20rem;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 0.22222222rem;
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap {
+  width: 26.83333333rem;
   margin-top: 0rem;
-  margin-right: 1.11111111rem;
-  margin-bottom: 1.11111111rem;
-  margin-left: 0rem;
-  overflow: hidden;
-}
-.contain .wrap article section.dispenser .dispenser-wrap .cell:nth-child(even) {
-  margin-right: 0rem;
-}
-.contain .wrap article section.dispenser .dispenser-wrap .cell .top {
-  height: 5.38888889rem;
-  text-align: left;
-  padding-top: 1.77777778rem;
-  padding-right: 3.33333333rem;
-  padding-bottom: 0rem;
-  padding-left: 3.88888889rem;
-  box-sizing: border-box;
-}
-.contain .wrap article section.dispenser .dispenser-wrap .cell .top p {
-  font-size: 1.61111111rem;
-  color: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-}
-.contain .wrap article section.dispenser .dispenser-wrap .cell .top span {
-  font-size: 1.22222222rem;
-  font-weight: 500;
-  color: #fff;
-  float: right;
-  margin-top: 0.22222222rem;
-}
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap {
-  width: 14.72222222rem;
-  height: 14.66666667rem;
-  position: relative;
-  background-color: #fff;
   margin-right: 0.55555556rem;
+  margin-bottom: 2.22222222rem;
+  margin-left: 0rem;
+  position: relative;
   display: inline-block;
   vertical-align: top;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap:before {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:after {
   content: '';
   display: block;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+  width: 3.33333333rem;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 1.11111111rem;
+  right: auto;
+  bottom: auto;
+  margin-left: -1.66666667rem;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(1):after {
+  content: '1';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(2):after {
+  content: '2';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(3):after {
+  content: '3';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(4):after {
+  content: '4';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(5):after {
+  content: '5';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(6):after {
+  content: '6';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(7):after {
+  content: '7';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(8):after {
+  content: '8';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(9):after {
+  content: '9';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(10):after {
+  content: '10';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(11):after {
+  content: '11';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(12):after {
+  content: '12';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(13):after {
+  content: '13';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(14):after {
+  content: '14';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(15):after {
+  content: '15';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(16):after {
+  content: '16';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(17):after {
+  content: '17';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(18):after {
+  content: '18';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(19):after {
+  content: '19';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap:nth-child(20):after {
+  content: '20';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell {
+  width: 13.33333333rem;
+  height: 20.55555556rem;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0.16666667rem;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell:nth-child(2) {
+  margin-right: 0rem;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .top {
+  text-align: center;
+  background-color: #fff;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .top .t-h {
+  font-size: 1.33333333rem;
+  color: #fff;
+  height: 3.88888889rem;
+  line-height: 3.88888889rem;
+  font-weight: 500;
+  border-radius: 0.22222222rem 0.22222222rem 0 0;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .top .kw {
+  height: 2.72222222rem;
+  line-height: 2.72222222rem;
+  margin-top: 0rem;
+  margin-right: 0.55555556rem;
+  margin-bottom: 0rem;
+  margin-left: 0.55555556rem;
+  border-bottom: 1px dashed #ddd;
+  position: relative;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .top .kw i {
   background-image: url('../img/light-b.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 3.11111111rem;
-  height: 3.11111111rem;
+  width: 0.77777778rem;
+  height: 1.44444444rem;
   position: absolute;
-  left: 6.66666667rem;
-  top: -1.22222222rem;
+  left: 2.77777778rem;
+  top: 0.61111111rem;
   right: auto;
   bottom: auto;
   display: inline-block;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap .car {
-  width: 12.5rem;
-  height: 11rem;
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .top .kw p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  position: absolute;
+  right: 1.94444444rem;
+  top: 0rem;
+  left: auto;
+  bottom: auto;
+  text-align: right;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap {
+  width: 13.33333333rem;
+  height: 13.94444444rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: 0 0 0.22222222rem 0.22222222rem;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .car {
+  width: 11.27777778rem;
+  height: 8.94444444rem;
   position: absolute;
   right: 0rem;
   top: 3.05555556rem;
@@ -1807,31 +2793,37 @@ a {
   background-image: url('../img/car1.png');
   background-size: contain;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap p {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .car.car2 {
+  position: absolute;
+  left: 0rem;
+  top: 3.05555556rem;
+  bottom: auto;
+  right: auto;
+  background-repeat: no-repeat;
+  background-image: url('../img/car2.png');
+  background-size: contain;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .soc-txt {
   font-size: 1.05555556rem;
-  line-height: 1.27777778rem;
   font-weight: 700;
   color: #333;
-  position: absolute;
-  left: 1.27777778rem;
-  top: 7.33333333rem;
-  right: auto;
-  bottom: auto;
-  display: inline-block;
+  text-align: center;
+  padding-top: 1.55555556rem;
+  box-sizing: border-box;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap .battery {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .battery {
   width: 8.5rem;
   height: 3.05555556rem;
   display: inline-block;
   position: absolute;
-  left: 4.88888889rem;
-  top: 7.16666667rem;
+  left: 2.77777778rem;
+  top: 6.11111111rem;
   right: auto;
   bottom: auto;
   background-color: #fff;
   border-radius: 0.22222222rem;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .battery:after {
   content: '';
   display: block;
   background-size: contain;
@@ -1844,12 +2836,12 @@ a {
   right: auto;
   bottom: auto;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.vacant .car,
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.vacant p,
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.vacant .battery {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.vacant .car,
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.vacant p,
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.vacant .battery {
   display: none;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.vacant:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.vacant:after {
   content: 'VACANT';
   font-size: 1.61111111rem;
   text-align: center;
@@ -1857,129 +2849,206 @@ a {
   color: #ddd;
   position: absolute;
   left: 50%;
-  top: 6.66666667rem;
+  top: 5rem;
   right: auto;
   bottom: auto;
   width: 100%;
   margin-left: -50%;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per0 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per0 p span:after {
   content: '0';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per0 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per0 .battery:after {
   background-image: url('../img/per0.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per10 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per10 p span:after {
   content: '10';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per10 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per10 .battery:after {
   background-image: url('../img/per10.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per20 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per20 p span:after {
   content: '20';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per20 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per20 .battery:after {
   background-image: url('../img/per20.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per30 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per30 p span:after {
   content: '30';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per30 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per30 .battery:after {
   background-image: url('../img/per30.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per40 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per40 p span:after {
   content: '40';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per40 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per40 .battery:after {
   background-image: url('../img/per40.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per50 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per50 p span:after {
   content: '50';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per50 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per50 .battery:after {
   background-image: url('../img/per50.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per60 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per60 p span:after {
   content: '60';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per60 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per60 .battery:after {
   background-image: url('../img/per60.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per70 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per70 p span:after {
   content: '70';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per70 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per70 .battery:after {
   background-image: url('../img/per70.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per80 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per80 p span:after {
   content: '80';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per80 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per80 .battery:after {
   background-image: url('../img/per80.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per90 p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per90 p span:after {
   content: '90';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap.per90 .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per90 .battery:after {
   background-image: url('../img/per90.png');
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell .garage-wrap + .garage-wrap {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap + .garage-wrap {
   margin-right: 0rem;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.repair .top {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.repair .top .t-h {
   background-color: #ff9c00;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.repair .top p:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.repair .top .t-h:after {
   content: '고장 수리중';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.charging .top {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.charging .top .t-h {
   background-color: #3a9b4e;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.charging .top p:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.charging .top .t-h:after {
   content: '충전중';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.charging .garage-wrap:before {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.charging .top .kw i {
+  background-image: url('../img/light-g.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.charging .garage-wrap:before {
   background-repeat: no-repeat;
   background-image: url('../img/light-g.png');
   background-size: contain;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .top {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .top .t-h {
   background-color: #115abc;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .top p:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .top .t-h:after {
   content: '충전완료';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap p {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap p {
   left: 8.05555556rem;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap p span:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap p span:after {
   content: '100';
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap .battery {
-  left: 11.61111111rem;
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap .battery {
   z-index: 1;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap .battery:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap .battery:after {
   background-repeat: no-repeat;
   background-image: url('../img/per100.png');
   background-size: contain;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap + .garage-wrap p,
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap + .garage-wrap .battery {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap + .garage-wrap p,
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap + .garage-wrap .battery {
   display: none;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.full .garage-wrap + .garage-wrap .car {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.full .garage-wrap + .garage-wrap .car {
   background-repeat: no-repeat;
   background-image: url('../img/car2.png');
   background-size: contain;
   left: 0rem;
   right: auto;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.waiting .top {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.waiting .top .t-h {
   background-color: #bbb;
 }
-.contain .wrap article section.dispenser .dispenser-wrap .cell.waiting .top p:after {
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell.waiting .top .t-h:after {
   content: '대기중';
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap.single .cell .garage-wrap .soc-txt {
+  position: absolute;
+  left: 9.27777778rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  width: 8.33333333rem;
+  z-index: 1;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap.single .cell .garage-wrap .battery {
+  position: absolute;
+  left: 9.16666667rem;
+  top: 6.11111111rem;
+  right: auto;
+  bottom: auto;
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap.single .cell + .cell .garage-wrap .soc-txt,
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap.single .cell + .cell .garage-wrap .battery {
+  display: none;
+}
+.contain .wrap article section.dispenser.g-status .charger-status {
+  display: block;
+}
+.contain .wrap article section.dispenser .garage-status {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap {
+  position: absolute;
+  left: 54rem;
+  top: 10.27777778rem;
+  right: auto;
+  bottom: auto;
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap .cell {
+  display: inline-block;
+  vertical-align: top;
+  width: 3.22222222rem;
+  height: 13.94444444rem;
+  background-color: #ddd;
+  border: 2px solid #02223a;
+  position: relative;
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap .cell.wearing:after {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url('../img/d-car.png');
+  background-size: contain;
+  width: 2.5rem;
+  height: 11.88888889rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap .cell.full {
+  background-color: #115abc;
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap .cell.charging {
+  background-color: #02881e;
+}
+.contain .wrap article section.dispenser .garage-status .g-wrap .cell.repair {
+  background-color: #ff9c00;
+}
+.contain .wrap article section.dispenser .garage-status .drawing img {
+  position: relative;
 }
 .contain .wrap article section.e-power {
   padding: 1.66666667rem;
@@ -1993,6 +3062,7 @@ a {
   color: #333;
   font-weight: 700;
   margin-bottom: 1.11111111rem;
+  text-align: left;
 }
 .contain .wrap article section.e-power .current,
 .contain .wrap article section.e-power .min15,
@@ -2061,11 +3131,11 @@ a {
 }
 .contain .wrap article section.e-power .cont-wrap .current .graph1 {
   display: inline-block;
-  margin-top: 1.66666667rem;
+  margin-top: 1.11111111rem;
 }
 .contain .wrap article section.e-power .cont-wrap .current .graph1 canvas {
   width: 21.66666667rem !important;
-  height: 9.44444444rem !important;
+  height: 10rem !important;
 }
 .contain .wrap article section.e-power .cont-wrap .min15 {
   width: 27.77777778rem;
@@ -2075,12 +3145,12 @@ a {
   display: inline-block;
 }
 .contain .wrap article section.e-power .cont-wrap .min15 .graph2 canvas {
-  width: 21.66666667rem;
-  height: 9.44444444rem;
+  width: 21.66666667rem !important;
+  height: 10rem !important;
 }
 .contain .wrap article section.e-power .cont-wrap .min15 ul {
   text-align: center;
-  margin-top: 1.66666667rem;
+  margin-top: 1.11111111rem;
 }
 .contain .wrap article section.e-power .cont-wrap .min15 ul li {
   font-size: 0.88888889rem;
@@ -2296,8 +3366,8 @@ a {
 }
 .contain .wrap article section.e-power .cont-wrap .inner .genealogy .gen-inner .acb-wrap {
   position: absolute;
-  left: 34.77777778rem;
-  top: 5.77777778rem;
+  left: 22.5rem;
+  top: 1.88888889rem;
   right: auto;
   bottom: auto;
 }
@@ -2460,6 +3530,9 @@ a {
   padding-top: 1.77777778rem;
   text-align: center;
 }
+.contain .wrap article section.e-power .cont-wrap .today-status .cell h3 {
+  text-align: center;
+}
 .contain .wrap article section.e-power .cont-wrap .today-status .cell p {
   font-size: 1rem;
   color: #333;
@@ -2541,11 +3614,11 @@ a {
   color: #333;
   margin-top: 3.88888889rem;
 }
-.contain .wrap article section.car-regist ul {
+.contain .wrap article section.car-regist .car-ul {
   margin-top: 1.11111111rem;
   display: inline-block;
 }
-.contain .wrap article section.car-regist ul li {
+.contain .wrap article section.car-regist .car-ul li {
   width: 44.44444444rem;
   height: 3.33333333rem;
   line-height: 3.33333333rem;
@@ -2556,7 +3629,7 @@ a {
   margin-bottom: 0.27777778rem;
   background-color: #b3cae8;
 }
-.contain .wrap article section.car-regist ul li p {
+.contain .wrap article section.car-regist .car-ul li p {
   font-size: 1.11111111rem;
   color: #fff;
   font-weight: 500;
@@ -2565,29 +3638,31 @@ a {
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.car-regist ul li .li-inner {
+.contain .wrap article section.car-regist .car-ul li .li-inner {
   width: 31.38888889rem;
   background-color: #fff;
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.car-regist ul li .li-inner input,
-.contain .wrap article section.car-regist ul li .li-inner .select {
+.contain .wrap article section.car-regist .car-ul li .li-inner input,
+.contain .wrap article section.car-regist .car-ul li .li-inner .select {
   font-size: 1.11111111rem;
   margin-left: 1.88888889rem;
   width: 27.72222222rem;
   height: 2.44444444rem;
   line-height: 2.44444444rem;
   border: 1px solid #d6d6d6;
-  padding-left: 1.11111111rem;
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.car-regist ul li .li-inner .select {
+.contain .wrap article section.car-regist .car-ul li .li-inner input {
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.car-regist .car-ul li .li-inner .select {
   position: relative;
 }
-.contain .wrap article section.car-regist ul li .li-inner .select:after {
+.contain .wrap article section.car-regist .car-ul li .li-inner .select:after {
   content: '';
   display: block;
   width: 0.77777778rem;
@@ -2602,65 +3677,79 @@ a {
   bottom: auto;
   pointer-events: none;
 }
-.contain .wrap article section.car-regist ul li .li-inner .select select {
+.contain .wrap article section.car-regist .car-ul li .li-inner .select select {
   font-size: 1.11111111rem;
   width: 100%;
   height: 100%;
   border: 0;
   background: none;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
 }
-.contain .wrap article section.car-regist ul li.batter-vol .li-inner input {
+.contain .wrap article section.car-regist .car-ul li .li-inner .p21-input {
+  width: 19.72222222rem;
+  margin-left: 0.77777778rem;
+}
+.contain .wrap article section.car-regist .car-ul li .li-inner .kw {
+  color: #333;
+  text-align: left;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.car-regist .car-ul li.batter-vol .li-inner input {
   width: 23.83333333rem;
 }
-.contain .wrap article section.car-regist ul li.batter-vol .li-inner input + p {
+.contain .wrap article section.car-regist .car-ul li.batter-vol .li-inner input + p {
   color: #333;
   width: 3.77777778rem;
   background-color: #fff;
   text-align: right;
 }
-.contain .wrap article section.car-regist ul li.batter-sn {
-  margin-top: 0.83333333rem;
+.contain .wrap article section.car-regist .car-ul li.addition {
   height: auto;
   line-height: normal;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner {
+.contain .wrap article section.car-regist .car-ul li.addition.batt {
+  margin-top: 0.83333333rem;
+}
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner {
   padding-top: 0.5rem;
   padding-right: 0rem;
   padding-bottom: 0.5rem;
   padding-left: 0rem;
   box-sizing: border-box;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner p {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner p {
   height: 100%;
   line-height: normal;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .select {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .select {
   width: 19.38888889rem;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .btn {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .btn {
   background-color: #b3cae8;
   margin-left: 1.11111111rem;
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .sn-list {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .sn-list {
   font-size: 0.88888889rem;
   color: #333;
   font-weight: 500;
   padding-left: 1.88888889rem;
   box-sizing: border-box;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .sn-list a {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .sn-list a {
   display: block;
   text-align: left;
   margin-top: 0.44444444rem;
   display: none;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .sn-list a s {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .sn-list a s {
   display: inline-block;
   width: 1.11111111rem;
 }
-.contain .wrap article section.car-regist ul li.batter-sn .li-inner .sn-list a.on {
+.contain .wrap article section.car-regist .car-ul li.addition .li-inner .sn-list a.on {
   display: block;
 }
 .contain .wrap article section.car-regist .btns {
@@ -2678,7 +3767,7 @@ a {
 .contain .wrap article section.car-regist.price ul li .li-inner input {
   width: 23.83333333rem;
 }
-.contain .wrap article section.car-regist.price ul li .li-inner input + p {
+.contain .wrap article section.car-regist.price ul li .li-inner input + .p {
   font-size: 1.11111111rem;
   font-weight: 500;
   color: #333;
@@ -2686,6 +3775,662 @@ a {
   vertical-align: middle;
   width: auto;
   margin-left: 1.33333333rem;
+  text-align: left;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap {
+  margin-bottom: 2.22222222rem;
+  margin-top: 0rem;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top {
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top .dmy {
+  margin-bottom: 1.66666667rem;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top .dmy ul li {
+  height: 2.22222222rem;
+  line-height: 2.22222222rem;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top .dmy ul li.on {
+  height: 2.22222222rem;
+  line-height: 2.22222222rem;
+  margin-top: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top .search-bar .select:nth-child(2) {
+  width: 6.11111111rem;
+}
+.contain .wrap article section.integrated.report .garage .top-wrap .search-top .search-bar .select:nth-child(3) {
+  width: 7.77777778rem;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 {
+  height: 4.44444444rem;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p {
+  font-size: 1rem;
+  height: 4.44444444rem;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p.r-l {
+  height: 4.44444444rem;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p.r-l:after {
+  content: '';
+  display: block;
+  height: 4.44444444rem;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p.double-line {
+  font-size: 1rem;
+  line-height: 1.38888889rem;
+  padding-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p.double-line s {
+  margin-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(1) {
+  font-size: 1.11111111rem;
+  width: 6%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(2) {
+  font-size: 1.11111111rem;
+  width: 10%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(3) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(3).double-line s {
+  width: 50%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(4) {
+  width: 26%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(4).double-line s {
+  width: 33.3%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(5) {
+  width: 13%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(5).double-line s {
+  width: 50%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(6) {
+  width: 17%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(6).double-line s {
+  width: 50%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(7) {
+  width: 9%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul .ul-tit.p26 p:nth-child(8) {
+  font-size: 1.11111111rem;
+  width: 7%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(1) {
+  width: 6%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(2) {
+  width: 10%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(3) {
+  width: 6%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(4) {
+  width: 6%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(5) {
+  width: 8.7%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(6) {
+  width: 8.7%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(7) {
+  width: 8.7%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(8) {
+  width: 6.5%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(9) {
+  width: 6.5%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(10) {
+  width: 8.5%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(11) {
+  width: 8.5%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(12) {
+  width: 8.9%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p:nth-child(13) {
+  width: 7%;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p label input[type=checkbox] + i {
+  width: 0.88888889rem;
+  height: 0.88888889rem;
+  border: 1px solid #333;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p label input[type=checkbox]:checked + i:after {
+  content: '';
+  display: block;
+  width: 0.55555556rem;
+  height: 0.55555556rem;
+  left: 0.11111111rem;
+  top: 0.11111111rem;
+  right: auto;
+  bottom: auto;
+  position: absolute;
+  background-color: #333;
+}
+.contain .wrap article section.integrated.report .garage .wrap-ul ul li p label input {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month {
+  height: 45.55555556rem;
+  overflow: hidden;
+}
+.contain .wrap article section.integrated.report .garage.month .top-wrap {
+  margin-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month .top-wrap .search-top .search-bar {
+  border-bottom: 2px solid #fff;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap {
+  height: 33.61111111rem;
+  padding-bottom: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .bill-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p {
+  font-size: 0.77777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p s {
+  font-size: 0.77777778rem;
+  display: inline-block;
+  margin-top: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(1) {
+  font-size: 1rem;
+  width: 18%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(2) {
+  width: 36%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(2).double-line s {
+  width: 33.3%;
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(3) {
+  width: 14%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(4) {
+  width: 16%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .ul-tit.p25 p:nth-child(5) {
+  width: 16%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul {
+  padding-bottom: 1.66666667rem;
+  box-sizing: border-box;
+  margin-top: 0rem;
+  height: 29.16666667rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p {
+  text-align: right;
+  padding-right: 0.83333333rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(1) {
+  width: 18%;
+  text-align: center;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(2) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(3) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(4) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(5) {
+  width: 14%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(6) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul li p:nth-child(7) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total {
+  width: 92%;
+  border-top: 2px solid #b3cae8;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3%;
+  bottom: 0rem;
+  right: auto;
+  top: auto;
+  background-color: #fff;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p {
+  font-size: 0.88888889rem;
+  color: #115abc;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(1) {
+  width: 17%;
+  text-align: center;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(2) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(3) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(4) {
+  width: 12%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(5) {
+  width: 14%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(6) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month .ul-wrap .wrap-ul .search-ul .total p:nth-child(7) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month .gra {
+  height: 33.61111111rem;
+}
+.contain .wrap article section.integrated.report .garage.month .gra p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 1.66666667rem;
+  text-align: left;
+}
+.contain .wrap article section.integrated.report .garage.month .gra canvas {
+  margin-top: -20%;
+}
+.contain .wrap article section.integrated.report .garage.month .gra.gra2 {
+  visibility: hidden;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap {
+  background: transparent;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul {
+  height: 16.11111111rem;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .consumption-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit {
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(1) {
+  font-size: 1rem;
+  width: 18%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(2) {
+  width: 16%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(3) {
+  width: 15%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(4) {
+  width: 38%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(4).double-line s {
+  width: 33.3%;
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .bill-tit p:nth-child(5) {
+  font-size: 1rem;
+  width: 13%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul {
+  height: 12.77777778rem;
+  margin-top: 0rem;
+  padding-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(1) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(2) {
+  width: 14%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(3) {
+  width: 13%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(4) {
+  width: 13.6%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(5) {
+  width: 13.6%;
+  padding-right: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(6) {
+  width: 13.6%;
+  padding-right: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li p:nth-child(7) {
+  width: 14%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul li:last-of-type {
+  border-top: 0;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total {
+  height: 2.44444444rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(1) {
+  width: 18%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(2) {
+  width: 14%;
+  padding-right: 0.72222222rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(3) {
+  width: 13%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(4) {
+  width: 13.6%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(5) {
+  width: 13.6%;
+  padding-right: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(6) {
+  width: 13.6%;
+  padding-right: 0.27777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .search-ul .total p:nth-child(7) {
+  width: 14%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table {
+  margin-top: 0.83333333rem;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  height: 18.22222222rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 1.38888889rem;
+  padding-right: 1.66666667rem;
+  padding-bottom: 0rem;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+  width: 37.5%;
+  text-align: left;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 1.11111111rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap .table table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap .table table tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap .table table tr:last-of-type {
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap .table table tr td {
+  font-size: 0.88888889rem;
+  color: #333;
+  height: 2.22222222rem;
+  line-height: 2.22222222rem;
+  font-weight: 300;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap .table table tr .ri {
+  text-align: right;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap {
+  width: 62.5%;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap p {
+  border-bottom: 1px solid #666;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table {
+  height: 13.05555556rem;
+  overflow: auto;
+  padding-bottom: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table {
+  border-top: 0;
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table tr:last-of-type {
+  border-bottom: 1px solid #666;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table tr td {
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table tr td.ct {
+  text-align: center;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table tr td.ri {
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table table tr td.sum {
+  font-weight: 500;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .gra.gra1 {
+  visibility: hidden;
+}
+.contain .wrap article section.integrated.report .garage.month.bill .gra.gra2 {
+  visibility: visible;
+}
+.contain .wrap article section.integrated.report .garage.month.year .top-wrap .search-top .search-bar .select + .select {
+  width: 7.77777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit {
+  font-size: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.consumption-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit {
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p {
+  font-size: 0.77777778rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(1) {
+  font-size: 1rem;
+  width: 18%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(2) {
+  width: 37%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(2).double-line s {
+  width: 33.3%;
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(3) {
+  width: 13%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(4) {
+  width: 16%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .ul-tit.bill-tit p:nth-child(5) {
+  width: 16%;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .consum-ul {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(1) {
+  width: 15%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(2) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(3) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(4) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(5) {
+  width: 13%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(6) {
+  width: 16%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul li p:nth-child(7) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total {
+  height: 2.44444444rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(1) {
+  width: 15%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(2) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(3) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(4) {
+  width: 13.3%;
+  padding-right: 0.55555556rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(5) {
+  width: 13%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(6) {
+  width: 16%;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .search-ul .total p:nth-child(7) {
+  width: 16%;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table {
+  height: auto;
+}
+.contain .wrap article section.integrated.report .garage.month.year .ul-wrap .wrap-ul .price-table .table-wrap + .table-wrap .table + p {
+  margin-top: 2.22222222rem;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .top-wrap .accumulate {
+  visibility: hidden;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap {
+  width: 58%;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit {
+  width: 98%;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit.bill-tit {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit.consumption-tit {
+  display: inline-block;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit.consumption-tit p {
+  font-size: 0.88888889rem;
+  width: 12.5% !important;
+  letter-spacing: -0.05em;
+  padding-right: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit.consumption-tit p:nth-child(1) {
+  width: 9% !important;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .ul-tit.consumption-tit p:nth-child(8) {
+  width: 16% !important;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .search-ul {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .consum-ul {
+  display: inline-block;
+  width: 98%;
+  margin-top: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .consum-ul li {
+  height: 2.22222222rem;
+  line-height: 2.22222222rem;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 0rem;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .consum-ul li p {
+  font-size: 0.88888889rem;
+  width: 12.5% !important;
+  text-align: right;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .consum-ul li p:nth-child(1) {
+  width: 9% !important;
+  text-align: center;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .ul-wrap .wrap-ul .consum-ul li p:nth-child(8) {
+  width: 16% !important;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .gra2 {
+  display: none;
+}
+.contain .wrap article section.integrated.report .garage.month.consum .gra1 {
+  width: 41.5%;
+  visibility: visible;
 }
 .contain .wrap article .copy {
   font-size: 0.88888889rem;
@@ -2704,8 +4449,16 @@ a {
 .contain .wrap article.aside-on .dispenser .remark-img {
   left: 14.44444444rem;
 }
+.contain .wrap article.aside-on .dispenser .dispenser-wrap {
+  margin-left: 9.72222222rem;
+  width: 64.44444444rem;
+}
 .contain .wrap article.aside-on .integrated.car-list .garage {
   width: 78.88888889rem;
   margin-left: 18.83333333rem;
+}
+.contain .wrap article.aside-on .integrated.search .garage {
+  width: 85rem;
+  margin-left: 9.44444444rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>통합 관리자 설정 : 사용자 관리</h3>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <article>
+        <section class="car-regist management">
+          <div class="manage-menu">
+            <ul class="menu-ul">
+              <li class="on"><a href="p06.html">사용자 관리</a></li>
+              <li><a href="p10.html">운수사 관리</a></li>
+              <li><a href="p12.html">차고지 관리</a></li>
+              <li><a href="p14.html">노선 관리</a></li>
+              <li><a href="p16.html">배터리 설정</a></li>
+            </ul>
+          </div>
+          <h2>사용자 추가</h2>
+          <ul class="car-ul">
+            <li>
+              <p>계정 아이디</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>이름</p>
+              <div class="li-inner">
+                <input type="text">
+              </div>
+            </li>
+            <li>
+              <p>권한</p>
+              <div class="li-inner">
+                <div class="select">
+                  <select class="user-group">
+                    <option value="">권한그룹</option>
+                    <option value="a-group">운수사 관리자</option>
+                    <option value="b-group">차고지 관리자</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p>연락처</p>
+              <div class="li-inner">
+                <input type="number">
+              </div>
+            </li>
+            <li>
+              <p>비밀번호</p>
+              <div class="li-inner">
+                <input type="password">
+              </div>
+            </li>
+            <li>
+              <p>비밀번호 확인</p>
+              <div class="li-inner">
+                <input type="password">
+              </div>
+            </li>
+            <li>
+              <p class="user-txt">운수사</p>
+              <div class="li-inner">
+                <div class="select">
+                  <select>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="btns">
+            <a class="btn">취소</a>
+            <a class="btn">등록</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script>
+    let userGroup = document.querySelector('.user-group');
+    let userTxt = document.querySelector('.car-ul .user-txt');
+    function selectEvent() {
+      let groupValue = userGroup.options[userGroup.selectedIndex].value;
+      if(groupValue === 'b-group') {
+        userTxt.innerHTML = '차고지';
+      } else {
+        userTxt.innerHTML = '운수사';
+      }
+    }
+    userGroup.addEventListener('change', selectEvent);
+  </script>
+</body>
+</html>
+

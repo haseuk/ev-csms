@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>보고서</h3>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li><a href="p18.html">차고지 현황</a></li>
+            <li><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="">보고서</a>
+              <ul class="depth2">
+                <li class="active"><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="integrated search report">
+          <div class="garage">
+            <div class="top-wrap">
+              <div class="search-top">
+                <div class="dmy">
+                  <ul>
+                    <li class="on"><a href="p29.html">일별</a></li>
+                    <li><a href="p30.html">월별</a></li>
+                    <li><a href="p31.html">연도별</a></li>
+                  </ul>
+                </div>
+                <div class="search-bar">
+                  <div class="select">
+                    <select>
+                      <option value="">2021년</option>
+                      <option value="">2020년</option>
+                      <option value="">2019년</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select>
+                      <option value="">12월</option>
+                      <option value="">11월</option>
+                      <option value="">10월</option>
+                      <option value="">9월</option>
+                      <option value="">8월</option>
+                      <option value="">7월</option>
+                      <option value="">6월</option>
+                      <option value="">5월</option>
+                      <option value="">4월</option>
+                      <option value="">3월</option>
+                      <option value="">2월</option>
+                      <option value="">1월</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select>
+                      <option value="">31일</option>
+                      <option value="">30일</option>
+                      <option value="">29일</option>
+                    </select>
+                  </div>
+                  <div class="btn date-search">조회</div>
+                </div>
+                <a class="download">다운로드</a>
+              </div>
+            </div>
+            <div class="wrap-ul">
+              <div class="ul-tit p26">
+                <p class="r-l">NO</p>
+                <p class="r-l">차량번호</p>
+                <p class="double-line r-l">충전기<br> <s>A</s><s>B</s></p>
+                <p class="double-line r-l">충전시간 (hh:mm:ss)<br> <s>시작</s><s>종료</s><s>소요시간</s></p>
+                <p class="double-line r-l">SOC(%)<br> <s>전</s><s>후</s></p>
+                <p class="double-line r-l">충전전력량(kWh)<br> <s>베터리 용량</s><s>충전량</s></p>
+                <p class="r-l">주행거리(km)</p>
+                <p>비고</p>
+              </div>
+              <ul>
+                <li>
+                  <p>1</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>2</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>3</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>4</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>5</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>6</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>7</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>8</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+                <li>
+                  <p>9</p>
+                  <p>AA034-01</p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox">
+                      <i></i>
+                    </label>
+                  </p>
+                  <p>10:33:40</p>
+                  <p>11:33:40</p>
+                  <p>00:24:06</p>
+                  <p>80</p>
+                  <p>80</p>
+                  <p>256.00</p>
+                  <p>24.32</p>
+                  <p>7.395</p>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
+

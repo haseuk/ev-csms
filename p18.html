@@ -15,7 +15,7 @@
       <header>
         <div class="h-inner">
           <h1><a href="">EV_CSMS</a></h1>
-          <h3>설정 : 차량 설정</h3>
+          <h3>차고지 현황</h3>
           <a class="area-name">서울 보성운수 차고지 정보 ></a>
           <div class="h-wrap">
             <div class="time"></div>
@@ -40,7 +40,7 @@
           <ul class="depth1">
             <li><a href="p04.html">통합모니터링</a></li>
             <li><a href="p06.html">통합관리자 설정</a></li>
-            <li><a href="p18.html">차고지 현황</a></li>
+            <li class="active"><a href="p18.html">차고지 현황</a></li>
             <li><a href="p22.html">장비별 세부</a>
               <ul class="depth2">
                 <li><a href="p22.html"><i></i> 디스펜서</a></li>
@@ -61,9 +61,9 @@
                 <li><a href="p31.html"><i></i> 년간</a></li>
               </ul>
             </li>
-            <li class="active"><a href="p32.html">설정</a>
+            <li><a href="p32.html">설정</a>
               <ul class="depth2">
-                <li class="active"><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
                 <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
                 <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
               </ul>
@@ -73,89 +73,58 @@
       </aside>
 
       <article>
-        <section class="car-regist">
-          <h2>차량 등록</h2>
-          <ul class="car-ul">
-            <li>
-              <p>차대번호</p>
-              <div class="li-inner">
-                <input type="text">
-              </div>
-            </li>
-            <li>
-              <p>차량번호</p>
-              <div class="li-inner">
-                <input type="text">
-              </div>
-            </li>
-            <li>
-              <p>제조사</p>
-              <div class="li-inner">
-                <input type="text">
-              </div>
-            </li>
-            <li>
-              <p>모델명</p>
-              <div class="li-inner">
-                <input type="text">
-              </div>
-            </li>
-            <li class="batter-vol">
-              <p>배터리용량</p>
-              <div class="li-inner">
-                <input type="text">
-                <p>kWh</p>
-              </div>
-            </li>
-            <li>
-              <p>배터리 모듈수량</p>
-              <div class="li-inner">
-                <input type="text">
-              </div>
-            </li>
-            <li>
-              <p>노선번호</p>
-              <div class="li-inner">
-                <div class="select">
-                  <select>
-                    <option value="">노선번호 253</option>
-                  </select>
-                </div>
-              </div>
-            </li>
-            <li class="addition batt">
-              <p>배터리</p>
-              <div class="li-inner">
-                <div class="select">
-                  <select>
-                    <option value=""></option>
-                  </select>
-                </div>
-                <a class="btn">등록</a>
-                <div class="sn-list">
-                  <a class="on">X <s></s> 배터리용량_시리얼번호</a>
-                  <a class="on">X <s></s> 배터리용량_시리얼번호</a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="btns">
-            <a class="btn">취소</a>
-            <a class="btn">등록</a>
+        <section class="dispenser g-status">
+          <div class="charger-status">
+            <h3>충전기 운영 현황</h3>
+            <ul>
+              <li class="list1"><p>총 충전기</p> <span><s>10</s>대</span></li>
+              <li><p>충전중</p> <span><s>2</s>대</span></li>
+              <li><p>대기중</p> <span><s>7</s>대</span></li>
+              <li><p>고장/수리중</p> <span><s>1</s>대</span></li>
+            </ul>
+          </div>
+
+          <div class="charger-status">
+            <h3>전력 사용 현황</h3>
+            <ul>
+              <li class="list1"><p>금일 전력사용량</p> <span><s>800</s>kWh</span></li>
+              <li class="list1"><p>금월 전력사용량</p> <span><s>6,400</s>kWh</span></li>
+              <li class="list1"><p>연간 전력사용량</p> <span><s>18,520</s>kWh</span></li>
+            </ul>
+          </div>
+
+          <img src="img/remark-battery.png" alt="" class="remark-img">
+
+          <div class="garage-status">
+            <div class="g-wrap">
+              <!--###### cell에 wearing 들어가면 차 입고 상태-->
+              <!--###### cell에 full 들어가면 충전 완료-->
+              <!--###### cell에 charging 들어가면 충전 중-->
+              <!--###### cell에 repair 들어가면 점검-->
+              <div class="cell wearing full"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell wearing full"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell wearing charging"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell repair"></div>
+              <div class="cell wearing charging"></div>
+            </div>
+
+            <!--######도면 들어가는 자리-->
+            <div class="drawing">
+              <img src="img/drawing.png" alt="">
+            </div>
           </div>
         </section>
       </article>
     </div>
   </div>
   <script src="js/index.js"></script>
-  <script>
-    let snList = document.querySelectorAll('.sn-list a')
-    Array.prototype.forEach.call(snList, function(e) {
-      e.addEventListener('click', function() {
-        e.classList.remove('on');
-      })
-    });
-  </script>
 </body>
 </html>
 

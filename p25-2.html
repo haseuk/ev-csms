@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>조회 : 전력 조회</h3>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li><a href="p18.html">차고지 현황</a></li>
+            <li><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li class="active"><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="integrated search">
+          <div class="garage">
+            <div class="top-wrap">
+              <div class="search-top">
+                <div class="dmy">
+                  <ul>
+                    <li><a href="p25-1.html">일별</a></li>
+                    <li class="on"><a href="p25-2.html">월별</a></li>
+                    <li><a href="p25-3.html">연도별</a></li>
+                  </ul>
+                </div>
+                <div class="search-bar">
+                  <div class="select">
+                    <select>
+                      <option value="">2021년</option>
+                      <option value="">2020년</option>
+                      <option value="">2019년</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select>
+                      <option value="">12월</option>
+                      <option value="">11월</option>
+                      <option value="">10월</option>
+                      <option value="">9월</option>
+                      <option value="">8월</option>
+                      <option value="">7월</option>
+                      <option value="">6월</option>
+                      <option value="">5월</option>
+                      <option value="">4월</option>
+                      <option value="">3월</option>
+                      <option value="">2월</option>
+                      <option value="">1월</option>
+                    </select>
+                  </div>
+                  <div class="btn date-search">조회</div>
+                </div>
+                <a class="download">다운로드</a>
+              </div>
+              <div class="accumulate">
+                <div class="cell cell1">
+                  <p>월간 전력사용량</p>
+                  <p><s>10,615.00</s> kWh</p>
+                </div>
+                <div class="cell cell1">
+                  <p>월간 최대전력</p>
+                  <p><s>1,490.00</s> kWh</p>
+                </div>
+              </div>
+            </div>
+            <div class="ul-wrap">
+              <div class="wrap-ul">
+                <div class="ul-tit p25">
+                  <p>일자</p>
+                  <p class="l-h">충전횟수<br> <s>(회)</s></p>
+                  <p class="l-h">충전전력량<br> <s>(kWh)</s></p>
+                  <p class="l-h">계통 전력사용량<br> <s>(kWh)</s></p>
+                  <p class="l-h">계통 최대전력<br> <s>(kW)</s></p>
+                </div>
+                <ul class="search-ul">
+                  <li>
+                    <p>2021-03-01</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-02</p>
+                    <p>6</p>
+                    <p>234.00</p>
+                    <p>234.00</p>
+                    <p>468.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-03</p>
+                    <p>7</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-04</p>
+                    <p>4</p>
+                    <p>345.00</p>
+                    <p>345.00</p>
+                    <p>690.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-05</p>
+                    <p>5</p>
+                    <p>456.00</p>
+                    <p>456.00</p>
+                    <p>912.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-06</p>
+                    <p>4</p>
+                    <p>234.00</p>
+                    <p>234.00</p>
+                    <p>468.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-07</p>
+                    <p>6</p>
+                    <p>234.00</p>
+                    <p>234.00</p>
+                    <p>468.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-08</p>
+                    <p>7</p>
+                    <p>546.00</p>
+                    <p>546.00</p>
+                    <p>1,092.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-09</p>
+                    <p>8</p>
+                    <p>745.00</p>
+                    <p>745.00</p>
+                    <p>1,490.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-10</p>
+                    <p>4</p>
+                    <p>342.00</p>
+                    <p>342.00</p>
+                    <p>684.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-11</p>
+                    <p>7</p>
+                    <p>324.00</p>
+                    <p>324.00</p>
+                    <p>648.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-12</p>
+                    <p>5</p>
+                    <p>546.00</p>
+                    <p>546.00</p>
+                    <p>1,092.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-13</p>
+                    <p>6</p>
+                    <p>213.00</p>
+                    <p>213.00</p>
+                    <p>426.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-14</p>
+                    <p>7</p>
+                    <p>566.00</p>
+                    <p>566.00</p>
+                    <p>1,132.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-15</p>
+                    <p>8</p>
+                    <p>342.00</p>
+                    <p>342.00</p>
+                    <p>684.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-16</p>
+                    <p>4</p>
+                    <p>125.00</p>
+                    <p>125.00</p>
+                    <p>250.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-17</p>
+                    <p>4</p>
+                    <p>234.00</p>
+                    <p>234.00</p>
+                    <p>468.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-18</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-19</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-20</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-21</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-22</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-23</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-24</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-25</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-26</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-27</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-28</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-29</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                  <li>
+                    <p>2021-03-30</p>
+                    <p>5</p>
+                    <p>123.00</p>
+                    <p>123.00</p>
+                    <p>246.00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="gra">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script>
+    const labels = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]; // 시간
+    const options = {
+      responsive: false,
+      maintainAspectRatio: false,
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display: false,
+          },
+        }],
+        yAxes: [
+          {
+            id: 'A',
+            type: 'linear',
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 1600,
+              stepSize: 200,
+            }
+          },
+          {
+            id: 'B',
+            type: 'linear',
+            position: 'right',
+            ticks: {
+              min: 0,
+              max: 9,
+              stepSize: 1,
+            },
+            gridLines: {
+              display: false,
+            },
+          },
+        ]
+      },
+      legend: {
+        position: 'bottom',
+        labels: {
+          usePointStyle: true,
+          padding: 10
+        }
+      },
+    }
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: '충전전력량 (kWh)',
+          yAxisID: 'A',
+          backgroundColor: '#42b2ff',
+          borderColor: '#42b2ff',
+          pointRadius: 0,
+          data: [123.00,234.00,123.00,345.00,456.00,234.00,234.00,546.00,745.00,342.00,546.00,213.00,566.00,342.00,125.00,234.00,435.00,123.00,123.00,123.00,123.00,123.00,123.00,123.00,123.00], //충전전력량
+          fill: false,
+        },
+        {
+          label: '계통 전력사용량(kWh)',
+          yAxisID: 'A',
+          backgroundColor: '#b3b3b3',
+          borderColor: '#b3b3b3',
+          pointRadius: 0,
+          data: [123.00,234.00,123.00,345.00,456.00,234.00,234.00,546.00,745.00,342.00,546.00,213.00,566.00,342.00,125.00,234.00,435.00,123.00,123.00,123.00,123.00,123.00,123.00,123.00,123.00], //계통 전력사용량
+          fill: false,
+        },
+        {
+          label: '계통 최대전력(kW)',
+          yAxisID: 'A',
+          backgroundColor: '#285fff',
+          borderColor: '#285fff',
+          pointRadius: 0,
+          type: 'line',
+          data: [246.00,468.00,246.00,690.00,912.00,468.00,468.00,1092.00,1490.00,684.00,684.00,1092.00,426.00,1132.00,684.00,250.00,468.00,870.00,246.00,246.00,246.00,246.00,246.00,246.00,246.00], //계통 최대전력
+          fill: false,
+          lineTension: 0
+        },
+        {
+          label: '충전횟수 (회)',
+          yAxisID: 'B',
+          backgroundColor: '#ffb330',
+          borderColor: '#ffb330',
+          pointRadius: 0,
+          type: 'line',
+          data: [1,2,4,5,3,2,1,4,8,7,5,3,2,1,4,5,6,3,2,5,1,2,4,2,7], //충전횟수
+          fill: false,
+          lineTension: 0
+        },
+      ]
+    };
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: options,
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config,
+    );
+  </script>
+</body>
+</html>
+

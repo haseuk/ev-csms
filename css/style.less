@@ -706,8 +706,9 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
             ul {
               li { .wh(100%,50); .p(15,20,0,10); .-box; .clear; .-b(#f4f1e7,2px);
                 &.list1 { .bgc(#f4f4f3); .br(4); .-b; }
-                &:nth-child(2) span s { color:#02881e; }
-                &:nth-child(4) span s { color:#ff9c00; }
+                &.list2 span s { color:#02881e; }
+                &.list3 span s { color:#33ccff; }
+                &.list5 span s { color:#ff9c00; }
                 &:last-child { .-b; }
                 p, span { .fs(18); .g-col; .medium; .ib; }
                 span { .fr; .ib;
@@ -805,7 +806,43 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
                     .battery:after { .bg('../img/per90.png'); }
                   }
                   &.per100 {
+                    .battery:after { .bg('../img/per100.png'); }
+                  }
+                  &.per100-full {
                     .battery:after { .bg('../img/per100-full.png'); }
+                  }
+                  &.per0-s {
+                    .battery:after { .bg('../img/per0-s.png'); }
+                  }
+                  &.per10-s {
+                    .battery:after { .bg('../img/per10-s.png'); }
+                  }
+                  &.per20-s {
+                    .battery:after { .bg('../img/per20-s.png'); }
+                  }
+                  &.per30-s {
+                    .battery:after { .bg('../img/per30-s.png'); }
+                  }
+                  &.per40-s {
+                    .battery:after { .bg('../img/per40-s.png'); }
+                  }
+                  &.per50-s {
+                    .battery:after { .bg('../img/per50-s.png'); }
+                  }
+                  &.per60-s {
+                    .battery:after { .bg('../img/per60-s.png'); }
+                  }
+                  &.per70-s {
+                    .battery:after { .bg('../img/per70-s.png'); }
+                  }
+                  &.per80-s {
+                    .battery:after { .bg('../img/per80-s.png'); }
+                  }
+                  &.per90-s {
+                    .battery:after { .bg('../img/per90-s.png'); }
+                  }
+                  &.per100-s {
+                    .battery:after { .bg('../img/per100-s.png'); }
                   }
                 }
                 .garage-wrap + .garage-wrap { .mr(0); }

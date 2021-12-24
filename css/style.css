@@ -2571,10 +2571,13 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 0.22222222rem;
   border-bottom: 0;
 }
-.contain .wrap article section.dispenser .charger-status ul li:nth-child(2) span s {
+.contain .wrap article section.dispenser .charger-status ul li.list2 span s {
   color: #02881e;
 }
-.contain .wrap article section.dispenser .charger-status ul li:nth-child(4) span s {
+.contain .wrap article section.dispenser .charger-status ul li.list3 span s {
+  color: #33ccff;
+}
+.contain .wrap article section.dispenser .charger-status ul li.list5 span s {
   color: #ff9c00;
 }
 .contain .wrap article section.dispenser .charger-status ul li:last-child {
@@ -2895,7 +2898,43 @@ input[type="number"]::-webkit-inner-spin-button {
   background-image: url('../img/per90.png');
 }
 .contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per100 .battery:after {
+  background-image: url('../img/per100.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per100-full .battery:after {
   background-image: url('../img/per100-full.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per0-s .battery:after {
+  background-image: url('../img/per0-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per10-s .battery:after {
+  background-image: url('../img/per10-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per20-s .battery:after {
+  background-image: url('../img/per20-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per30-s .battery:after {
+  background-image: url('../img/per30-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per40-s .battery:after {
+  background-image: url('../img/per40-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per50-s .battery:after {
+  background-image: url('../img/per50-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per60-s .battery:after {
+  background-image: url('../img/per60-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per70-s .battery:after {
+  background-image: url('../img/per70-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per80-s .battery:after {
+  background-image: url('../img/per80-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per90-s .battery:after {
+  background-image: url('../img/per90-s.png');
+}
+.contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap.per100-s .battery:after {
+  background-image: url('../img/per100-s.png');
 }
 .contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap + .garage-wrap {
   margin-right: 0rem;

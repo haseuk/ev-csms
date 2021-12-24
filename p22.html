@@ -79,9 +79,10 @@
             <h3>충전기 운영 현황</h3>
             <ul>
               <li class="list1"><p>총 충전기</p> <span><s>10</s>대</span></li>
-              <li><p>충전중</p> <span><s>2</s>대</span></li>
-              <li><p>대기중</p> <span><s>7</s>대</span></li>
-              <li><p>고장/수리중</p> <span><s>1</s>대</span></li>
+              <li class="list2"><p>충전중</p> <span><s>2</s>대</span></li>
+              <li class="list3"><p>충전대기</p> <span><s>2</s>대</span></li>
+              <li class="list4"><p>대기중</p> <span><s>7</s>대</span></li>
+              <li class="list5"><p>고장/수리중</p> <span><s>1</s>대</span></li>
             </ul>
           </div>
           <img src="img/remark-battery.png" alt="" class="remark-img">
@@ -99,6 +100,11 @@
 <!-- ####### 자동차 앞뒤는 garage-wrap car 클래스에 car1클래스 입력시는 앞 car2클래스 입력시는 뒤 -->
 
 
+
+<!--12월 23일 설명추가 ^^^^^^ cell-wrap single 들어가면 베터리가 한개로 표시-->
+<!--12월 23일 설명추가 ^^^^^^ 베터리 게이지 눈금은 garage-wrap 클래스에 per0~per100은 녹색 바탕 베터리 10개 있음  -->
+<!--12월 23일 설명추가 ^^^^^^ 베터리 게이지 눈금은 garage-wrap 클래스에 per0-s~per100-s은 하늘색 바탕 베터리 10개 있음  -->
+<!--12월 23일 설명추가 ^^^^^^ 베터리 게이지 눈금은 garage-wrap 클래스에 per100-full은 파란색 바탕 베터리 1개 있음  -->
 
 <!--12월 23일 수정 ^^^^^^ cell에 standby 들어가면 충전대기-->
 <!--12월 23일 수정 ^^^^^^ garage-wrap클래스에 per100 들어가면 파란바탕 베터리표시 -->
@@ -125,9 +131,9 @@
                     <p><s>1,245</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap per40">
+                <div class="garage-wrap per40-s">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span>0</span>%</p>
+                  <p class="soc-txt">SOC <span>40</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -311,7 +317,7 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap per100">
+                <div class="garage-wrap per100-full">
                   <div class="car"></div>
                   <p class="soc-txt">SOC <span>100</span>%</p>
                   <div class="battery"></div>
@@ -342,7 +348,7 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap per100">
+                <div class="garage-wrap per100-full">
                   <div class="car"></div>
                   <p class="soc-txt">SOC <span>100</span>%</p>
                   <div class="battery"></div>

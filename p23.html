@@ -12,7 +12,9 @@
 </head>
 <body>
   <div class="contain">
-    <div class="wrap">
+
+    <!-- ######### 12.06 수정 클래스 추가 p23-->
+    <div class="wrap p23">
       <header>
         <div class="h-inner">
           <h1><a href="">EV_CSMS</a></h1>
@@ -124,7 +126,10 @@
                       <div class="acb-status">
 
 <!--indicator 클래스에 charging, repair, full 클래스 추가에 따라 충전중, 고장/수리, 충전완료로 바뀜-->
-                        <div class="indicator charging">
+
+              <!--12월 23일 수정 ^^^^^^ indicator에 standby 들어가면 충전대기-->
+              <!--12월 23일 수정 ^^^^^^ indicator에 waiting 들어가면 대기중-->
+                        <div class="indicator waiting">
                           <span class="num">1</span>
                           <p class="txt"></p>
                         </div>

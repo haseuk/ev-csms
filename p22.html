@@ -11,7 +11,9 @@
 </head>
 <body>
   <div class="contain">
-    <div class="wrap">
+
+    <!-- ######### 12.06 수정 클래스 추가 p22-->
+    <div class="wrap p22">
       <header>
         <div class="h-inner">
           <h1><a href="">EV_CSMS</a></h1>
@@ -92,9 +94,14 @@
 <!-- ####### 충전완료는 cell 클래스에 full 입력 -->
 
 <!-- ####### 번개표시는 cell 클래스에 charging 입력하면 녹색 번개가 됨 그외는 검은색 번개 -->
-<!-- ####### 베터리 게이지 눈금은 garage-wrap 클래스에 per0 ~ per100 까지 들어가면 됨 -->
+<!-- ####### 베터리 게이지 눈금은 garage-wrap 클래스에 per0 ~ per100 까지 들어가면 됨(per100일 경우 파란바탕 베터리표시) -->
 <!-- ####### vacant 빈페이지는 garage-wrap 클래스에 vacant클래스 들어가면 됨 -->
-<!-- ####### 자동차 앞뒤는  garage-wrap car 클래스에 car1클래스 입력시는 앞 car2클래스 입력시는 뒤 -->
+<!-- ####### 자동차 앞뒤는 garage-wrap car 클래스에 car1클래스 입력시는 앞 car2클래스 입력시는 뒤 -->
+
+
+
+<!--12월 23일 수정 ^^^^^^ cell에 standby 들어가면 충전대기-->
+<!--12월 23일 수정 ^^^^^^ garage-wrap클래스에 per100 들어가면 파란바탕 베터리표시 -->
             <div class="cell-wrap dual">
               <div class="cell repair">
                 <div class="top">
@@ -106,11 +113,11 @@
                 </div>
                 <div class="garage-wrap vacant">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
-              <div class="cell charging">
+              <div class="cell standby">
                 <div class="top">
                   <p class="t-h"></p>
                   <div class="kw">
@@ -120,7 +127,7 @@
                 </div>
                 <div class="garage-wrap per40">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -137,7 +144,7 @@
                 </div>
                 <div class="garage-wrap per40">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>40</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -151,7 +158,7 @@
                 </div>
                 <div class="garage-wrap per40">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>40</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -166,9 +173,9 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per80">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>80</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -182,7 +189,7 @@
                 </div>
                 <div class="garage-wrap">
                   <div class="car car2"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>100</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -199,7 +206,7 @@
                 </div>
                 <div class="garage-wrap vacant">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -213,7 +220,7 @@
                 </div>
                 <div class="garage-wrap vacant">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -230,7 +237,7 @@
                 </div>
                 <div class="garage-wrap per30">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>30</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -244,7 +251,7 @@
                 </div>
                 <div class="garage-wrap per20">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>20</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -259,9 +266,9 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per80">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>85</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -273,9 +280,9 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per80">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>80</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -292,7 +299,7 @@
                 </div>
                 <div class="garage-wrap vacant">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -304,9 +311,9 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per100">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>100</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -321,9 +328,9 @@
                     <p><s>1,245</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per40">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>0</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -335,9 +342,9 @@
                     <p><s>4,000</s> kW</p>
                   </div>
                 </div>
-                <div class="garage-wrap">
+                <div class="garage-wrap per100">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>100</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -354,7 +361,7 @@
                 </div>
                 <div class="garage-wrap per30">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>30</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>
@@ -368,7 +375,7 @@
                 </div>
                 <div class="garage-wrap per20">
                   <div class="car"></div>
-                  <p class="soc-txt">SOC <span></span>%</p>
+                  <p class="soc-txt">SOC <span>20</span>%</p>
                   <div class="battery"></div>
                 </div>
               </div>

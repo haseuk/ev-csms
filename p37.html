@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>EV_CSMS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap p37">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>설정 : 장비별세부</h3>
+          <a class="area-name">서울 보성운수 차고지 정보 ></a>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li><a href="p18.html">차고지 현황</a></li>
+            <li class="active"><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li class="active"><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="integrated search record">
+          <div class="garage">
+            <div class="top-wrap">
+              <div class="search-top">
+                <div class="dmy">
+                  <ul>
+                    <li class="on"><a>VCB</a></li>
+                    <li><a>ACB</a></li>
+                    <li><a>DC</a></li>
+                  </ul>
+                </div>
+              </div>
+              <a class="exel-down">엑셀다운로드</a>
+            </div>
+            <h2 class="h2-tit"><s>VCB</s> 장비 이력</h2>
+            <div class="wrap-ul">
+              <ul>
+                <li class="tit">
+                  <p>시간</p>
+                  <p>유효전력</p>
+                  <p>무효전력</p>
+                  <p>역률</p>
+                  <p>주파수</p>
+                  <p>R상 전압</p>
+                  <p>S상 전압</p>
+                  <p>T상 전압</p>
+                  <p>R상 전류</p>
+                  <p>S상 전류</p>
+                  <p>T상 전류</p>
+                  <p>기타</p>
+                </li>
+                <li>
+                  <p>17:15</p>
+                  <p>342</p>
+                  <p>31</p>
+                  <p>0.98</p>
+                  <p>60.0</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                </li>
+                <li>
+                  <p>17:15</p>
+                  <p>342</p>
+                  <p>31</p>
+                  <p>0.98</p>
+                  <p>60.0</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                </li>
+                <li>
+                  <p>17:15</p>
+                  <p>342</p>
+                  <p>31</p>
+                  <p>0.98</p>
+                  <p>60.0</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                </li>
+                <li>
+                  <p>17:15</p>
+                  <p>342</p>
+                  <p>31</p>
+                  <p>0.98</p>
+                  <p>60.0</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>387</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                  <p>15</p>
+                </li>
+              </ul>
+              <div class="pagination">
+                <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+                <p><span>1</span> / <span>4</span></p>
+                <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+              </div>
+            </div>
+            <div class="vcb">
+              <h2 class="h2-graph"><s>VCB</s> 장비 그래프</h2>
+              <div class="btns">
+                <a class="graph-btn">유효전력</a>
+                <a class="graph-btn">무효전력</a>
+                <a class="graph-btn">R상전압</a>
+                <a class="graph-btn">S상전압</a>
+                <a class="graph-btn">T상전압</a>
+                <a class="graph-btn">R상전류</a>
+                <a class="graph-btn">S상전류</a>
+                <a class="graph-btn">T상전류</a>
+                <a class="graph-btn">주파수</a>
+              </div>
+              <div class="graph">
+                <canvas id="equipment"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="event-info">
+            <p class="tit">이벤트 정보</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <colgroup>
+                <col width="15%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="17%">
+                <col width="13%">
+                <col width="11.5%">
+              </colgroup>
+              <tr>
+                <th>발생시간</th>
+                <th>수위</th>
+                <th>장애메시지</th>
+                <th>장애원인</th>
+                <th>최초발생시간</th>
+                <th>해결상태</th>
+                <th>중복횟수</th>
+              </tr>
+              <tr>
+                <td>2022-1-20/18시 35분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-20/18시 35분</td>
+                <td>보수중</td>
+                <td>2회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/17시 05분</td>
+                <td>C</td>
+                <td>충전오류</td>
+                <td>콘센트불량</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>완료</td>
+                <td>1회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/09시 55분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>보수중</td>
+                <td>30회</td>
+              </tr>
+            </table>
+            <div class="pagination">
+              <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+              <p><span>1</span> / <span>4</span></p>
+              <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script>
+    let ctx = document.getElementById('equipment');
+    let data1 = [0,240,160,370,320,450,280,110,130,150,130,240,160,370,320,450,280,110,130,150,130,150,130,240] // 유효전력 데이터 값 입력
+    let data2 = [0,340,260,470,220,520,280,210,230,550,230,340,260,470,220,520,280,210,230,550,230,550,230,340] // 무효전력 데이터 값 입력
+    let data3 = [0,440,360,270,120,150,180,110,130,150,330,440,360,270,120,150,180,110,130,150,130,150,330,440] // R상전압 데이터 값 입력
+    let data4 = [0,240,260,270,220,350,280,110,330,350,130,240,260,270,220,350,280,110,330,350,330,350,130,240] // S상전압 데이터 값 입력
+    let data5 = [0,140,160,370,320,150,380,210,230,150,130,140,160,370,320,150,380,210,230,150,230,150,130,140] // T상전압 데이터 값 입력
+    let data6 = [0,240,160,270,220,250,280,110,230,150,130,240,160,270,220,250,280,110,230,150,230,150,130,240] // R상전류 데이터 값 입력
+    let data7 = [0,240,360,330,320,350,280,310,130,150,230,240,360,330,320,350,280,310,130,150,130,150,230,240] // S상전류 데이터 값 입력
+    let data8 = [0,240,160,530,220,150,380,130,230,450,130,240,160,530,220,150,380,130,230,450,230,450,130,240] // T상전류 데이터 값 입력
+    let data9 = [0,140,360,730,220,250,380,110,230,250,130,140,360,730,220,250,380,110,230,250,230,250,130,140] // 주파수 데이터 값 입력
+
+    let dataSet1 = {
+      label: '유효전력',
+      borderColor: '#c0504d',
+      backgroundColor: '#c0504d',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data1,
+    }
+    let dataSet2 = {
+      label: '무효전력',
+      borderColor: '#4f81bd',
+      backgroundColor: '#4f81bd',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data2,
+    }
+    let dataSet3 = {
+      label: 'R상 전압',
+      borderColor: '#b44fbd',
+      backgroundColor: '#b44fbd',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data3,
+    }
+    let dataSet4 = {
+      label: 'S상 전압',
+      borderColor: '#4fbd66',
+      backgroundColor: '#4fbd66',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data4,
+    }
+    let dataSet5 = {
+      label: 'T상 전압',
+      borderColor: '#bdbc4f',
+      backgroundColor: '#bdbc4f',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data5,
+    }
+    let dataSet6 = {
+      label: 'R상 전류 ',
+      borderColor: '#bd854f',
+      backgroundColor: '#bd854f',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data6,
+    }
+    let dataSet7 = {
+      label: 'S상 전류',
+      borderColor: '#764fbd',
+      backgroundColor: '#764fbd',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data7,
+    }
+    let dataSet8 = {
+      label: 'T상 전류',
+      borderColor: '#281fe3',
+      backgroundColor: '#281fe3',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data8,
+    }
+    let dataSet9 = {
+      label: '주파수',
+      borderColor: '#1ac9f5',
+      backgroundColor: '#1ac9f5',
+      pointRadius: 0,
+      lineTension: 0,
+      fill: false,
+      data: data9,
+    }
+
+    let config = {
+      type: 'line',
+      data: {
+        labels: ['00시','01시','02시','03시','04시','05시','06시','07시','08시','09시','10시','11시','12시','13시','14시','15시','16시','17시','18시','19시','20시','21시','22시','23시'],
+        datasets: []
+      },
+      options: {
+        responsive: false,
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: false,
+            },
+          }],
+        },
+        legend: {
+          position: 'bottom',
+          labels:{
+            fontSize: 15,
+            fontWeight: 700,
+            fontColor: '#333',
+            padding: 25,
+          }
+        },
+        aspectRatio: 5.5
+      }
+    };
+
+    let myChart = new Chart(ctx, config);
+
+    let gBtns = document.querySelectorAll('.graph-btn');
+    let gBtnOnOff = [];
+    Array.prototype.forEach.call(gBtns, function(e,idx) {
+      e.addEventListener('click', function() {
+        if(idx === 0) {
+          onOffCheck(dataSet1,e,idx);
+        } else if(idx === 1) {
+          onOffCheck(dataSet2,e,idx);
+        } else if(idx === 2) {
+          onOffCheck(dataSet3,e,idx);
+        } else if(idx === 3) {
+          onOffCheck(dataSet4,e,idx);
+        } else if(idx === 4) {
+          onOffCheck(dataSet5,e,idx);
+        } else if(idx === 5) {
+          onOffCheck(dataSet6,e,idx);
+        } else if(idx === 6) {
+          onOffCheck(dataSet7,e,idx);
+        } else if(idx === 7) {
+          onOffCheck(dataSet8,e,idx);
+        } else {
+          onOffCheck(dataSet9,e,idx);
+        }
+      })
+    });
+
+    function onOffCheck(obj,e,idx) {
+      if(!gBtnOnOff.includes(idx)) {
+        config.data.datasets.push(obj);
+        gBtnOnOff.push(idx);
+        gBtnOn(e);
+        chartUpdate();
+      } else {
+        let dataIdx = config.data.datasets.indexOf(obj);
+        config.data.datasets.splice(dataIdx,1);
+        let gBtnIdx = gBtnOnOff.indexOf(idx);
+        gBtnOnOff.splice(gBtnIdx,1);
+        gBtnOff(e);
+        chartUpdate();
+      }
+    }
+    function gBtnOn(e) {
+      e.classList.add('on');
+    }
+    function gBtnOff(e) {
+      e.classList.remove('on');
+    }
+    function chartUpdate() {
+      myChart.update();
+    }
+  </script>
+</body>
+</html>
+

@@ -194,11 +194,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .contain .wrap aside {
   position: absolute;
-  left: 0rem;
+  left: 50%;
   top: 6.11111111rem;
   right: auto;
   bottom: auto;
   z-index: 1;
+  margin-left: -53.33333333rem;
 }
 .contain .wrap aside .s-btn {
   font-size: 0.55555556rem;
@@ -478,6 +479,15 @@ input[type="number"]::-webkit-inner-spin-button {
   height: calc(100vh - 80px);
   min-height: 48.88888889rem;
   text-align: left;
+  zoom: 1;
+}
+.contain .wrap article section.integrated:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
 }
 .contain .wrap article section.integrated .status-wrap {
   display: inline-block;
@@ -1035,38 +1045,34 @@ input[type="number"]::-webkit-inner-spin-button {
 .contain .wrap article section.integrated .client.on .list-btn p img {
   transform: rotate(180deg);
 }
-.contain .wrap article section.integrated .area-chk-list {
+.contain .wrap article section.integrated .chk-wrap {
+  width: 25rem;
   display: inline-block;
-  vertical-align: top;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list {
   background-color: #fff;
   border-radius: 0.22222222rem;
   width: 25rem;
-  min-height: 47.77777778rem;
+  height: 22.77777778rem;
   padding-top: 1.11111111rem;
   padding-right: 1.5rem;
   padding-bottom: 1.11111111rem;
   padding-left: 1.5rem;
   box-sizing: border-box;
   position: relative;
-  zoom: 1;
-  float: right;
+  display: inline-block;
 }
-.contain .wrap article section.integrated .area-chk-list:after {
-  content: '';
-  display: block;
-  clear: both;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
+.contain .wrap article section.integrated .chk-wrap .chk-list.area-chk-list {
+  margin-bottom: 0.55555556rem;
 }
-.contain .wrap article section.integrated .area-chk-list h3 {
+.contain .wrap article section.integrated .chk-wrap .chk-list h3 {
   font-size: 1.11111111rem;
   color: #333;
   font-weight: 700;
   display: inline-block;
   vertical-align: top;
 }
-.contain .wrap article section.integrated .area-chk-list .input {
+.contain .wrap article section.integrated .chk-wrap .chk-list .input {
   display: inline-block;
   float: right;
   width: 10.72222222rem;
@@ -1074,7 +1080,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #f4f4f3;
   border-radius: 0.22222222rem;
 }
-.contain .wrap article section.integrated .area-chk-list .input input {
+.contain .wrap article section.integrated .chk-wrap .chk-list .input input {
   border: 0;
   background: none;
   line-height: 1.55555556rem;
@@ -1084,33 +1090,35 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 8.61111111rem;
   font-family: GmarketSans, sans-serif;
 }
-.contain .wrap article section.integrated .area-chk-list .input ::placeholder {
+.contain .wrap article section.integrated .chk-wrap .chk-list .input ::placeholder {
   font-size: 0.77777778rem;
   color: #c6c6c6;
 }
-.contain .wrap article section.integrated .area-chk-list .input img {
+.contain .wrap article section.integrated .chk-wrap .chk-list .input img {
   width: 0.83333333rem;
   height: 0.77777778rem;
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.integrated .area-chk-list ul {
-  margin-top: 1.66666667rem;
+.contain .wrap article section.integrated .chk-wrap .chk-list ul {
+  margin-top: 1.11111111rem;
+  height: 15.83333333rem;
+  overflow: auto;
 }
-.contain .wrap article section.integrated .area-chk-list ul li {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li {
   border-top: 2px solid #f4f1e7;
   line-height: 2.77777778rem;
   box-sizing: border-box;
 }
-.contain .wrap article section.integrated .area-chk-list ul li:last-child {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li:last-child {
   border-bottom: 2px solid #f4f1e7;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a {
   width: 100%;
   height: 100%;
   zoom: 1;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a:after {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a:after {
   content: '';
   display: block;
   clear: both;
@@ -1118,18 +1126,18 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 0;
   visibility: hidden;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a p {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a p {
   font-size: 1rem;
   font-weight: 500;
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a .area-status {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a .area-status {
   display: inline-block;
   float: right;
   width: 4.77777778rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a .area-status s {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a .area-status s {
   width: 0.88888889rem;
   height: 0.88888889rem;
   background-color: #115abc;
@@ -1137,23 +1145,23 @@ input[type="number"]::-webkit-inner-spin-button {
   display: inline-block;
   vertical-align: middle;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a .area-status span {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a .area-status span {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   line-height: 1;
   margin-left: 0.44444444rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a .area-status span:after {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a .area-status span:after {
   content: '정상';
   font-size: 1rem;
   color: #333;
   font-weight: 500;
 }
-.contain .wrap article section.integrated .area-chk-list ul li a .area-status img {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li a .area-status img {
   margin-left: 0.66666667rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li .cont {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont {
   background-color: #f4f1e7;
   padding-top: 0rem;
   padding-right: 3.11111111rem;
@@ -1164,21 +1172,21 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 0rem;
   overflow: hidden;
 }
-.contain .wrap article section.integrated .area-chk-list ul li .cont table {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont table {
   margin-top: 0.83333333rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li .cont table tr th,
-.contain .wrap article section.integrated .area-chk-list ul li .cont table tr td {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont table tr th,
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont table tr td {
   font-size: 0.88888889rem;
   line-height: 1.55555556rem;
   color: #333;
   text-align: left;
   font-weight: 500;
 }
-.contain .wrap article section.integrated .area-chk-list ul li .cont table tr th {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont table tr th {
   width: 4.72222222rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li .cont a {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li .cont a {
   font-size: 0.77777778rem;
   color: #333;
   width: 15.72222222rem;
@@ -1188,17 +1196,311 @@ input[type="number"]::-webkit-inner-spin-button {
   display: inline-block;
   background-color: #fff;
   border-radius: 0.22222222rem;
-  margin-top: 1.66666667rem;
+  margin-top: 0.55555556rem;
+  margin-right: 0rem;
   margin-bottom: 0.83333333rem;
+  margin-left: 0rem;
 }
-.contain .wrap article section.integrated .area-chk-list ul li.on a .area-status img {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li.on a .area-status img {
   transform: rotate(180deg);
 }
-.contain .wrap article section.integrated .area-chk-list ul li.on .cont {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li.on .cont {
   height: auto;
 }
-.contain .wrap article section.integrated .area-chk-list ul li.check a .area-status s {
+.contain .wrap article section.integrated .chk-wrap .chk-list ul li.check a .area-status s {
   background-color: #ff9c00;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list ::-webkit-scrollbar {
+  display: none;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list ::-webkit-scrollbar-thumb {
+  display: none;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list.route-chk-list ul li a .area-status {
+  text-align: right;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list.route-chk-list ul li .cont table {
+  width: auto;
+  margin-top: 0.55555556rem;
+  margin-right: 0rem;
+  margin-bottom: 0.55555556rem;
+  margin-left: 0rem;
+  table-layout: fixed;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list.route-chk-list ul li .cont table th {
+  width: 6.94444444rem;
+}
+.contain .wrap article section.integrated .chk-wrap .chk-list.route-chk-list ul li .cont table td {
+  width: 3.88888889rem;
+  text-align: right;
+}
+.contain .wrap article section.integrated .general-info {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+.contain .wrap article section.integrated .general-info .box {
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  width: 25rem;
+  padding-top: 1.11111111rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.11111111rem;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 0.55555556rem;
+  position: relative;
+}
+.contain .wrap article section.integrated .general-info div .tit {
+  font-size: 1.11111111rem;
+  line-height: 1.77777778rem;
+  color: #333;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 0.83333333rem;
+  border-bottom: 2px solid #f4f1e7;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated .general-info .d-day .kwh {
+  font-size: 0.77777778rem;
+  font-weight: 500;
+  position: absolute;
+  color: #c6c6c6;
+  right: 1.88888889rem;
+  top: 2.5rem;
+  left: auto;
+  bottom: auto;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view {
+  padding-top: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.61111111rem;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view .amount {
+  font-size: 0.88888889rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view span {
+  font-size: 0.77777778rem;
+  font-weight: 500;
+  color: #fff;
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.61111111rem;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view span:nth-of-type(1) {
+  background-color: #02881e;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view span:nth-of-type(2) {
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated .general-info .d-day .c-view span:nth-of-type(3) {
+  background-color: #ff9c00;
+}
+.contain .wrap article section.integrated .general-info .efficiency {
+  width: 11.11111111rem;
+  margin-right: 0.55555556rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.contain .wrap article section.integrated .general-info .efficiency .graph,
+.contain .wrap article section.integrated .general-info .efficiency .eff {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.contain .wrap article section.integrated .general-info .efficiency .graph p,
+.contain .wrap article section.integrated .general-info .efficiency .eff p {
+  font-size: 0.88888889rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated .general-info .efficiency .graph {
+  position: relative;
+  padding-top: 0.55555556rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.contain .wrap article section.integrated .general-info .efficiency .graph canvas {
+  width: 3.33333333rem !important;
+  height: 3.33333333rem !important;
+  display: inline-block !important;
+}
+.contain .wrap article section.integrated .general-info .efficiency .graph .data {
+  font-size: 0.66666667rem;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 2.11111111rem;
+  right: auto;
+  bottom: auto;
+  transform: translateX(-50%);
+}
+.contain .wrap article section.integrated .general-info .efficiency .eff {
+  padding-top: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated .general-info .efficiency .eff .circle {
+  font-size: 0.66666667rem;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  width: 2.83333333rem;
+  height: 2.83333333rem;
+  line-height: 2.83333333rem;
+  background-color: #115abc;
+  border-radius: 50%;
+  display: inline-block;
+}
+.contain .wrap article section.integrated .general-info .status {
+  width: 13.33333333rem;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+}
+.contain .wrap article section.integrated .general-info .status .total {
+  font-size: 0.77777778rem;
+  color: #595959;
+  font-weight: 500;
+  position: absolute;
+  right: 1.38888889rem;
+  top: 1.66666667rem;
+  left: auto;
+  bottom: auto;
+}
+.contain .wrap article section.integrated .general-info .status > div {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 1.66666667rem;
+  box-sizing: border-box;
+  width: 33.3%;
+  text-align: center;
+}
+.contain .wrap article section.integrated .general-info .status > div .circle {
+  font-size: 0.66666667rem;
+  color: #fff;
+  font-weight: 500;
+  width: 1.88888889rem;
+  height: 1.88888889rem;
+  line-height: 1.88888889rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 0.94444444rem;
+  display: inline-block;
+}
+.contain .wrap article section.integrated .general-info .status > div .circle + p {
+  font-size: 0.88888889rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.contain .wrap article section.integrated .general-info .status > div.normal .circle {
+  background-color: #02881e;
+}
+.contain .wrap article section.integrated .general-info .status > div.breakdown .circle {
+  background-color: #ff0505;
+}
+.contain .wrap article section.integrated .general-info .status > div.error .circle {
+  background-color: #9a9a9a;
+}
+.contain .wrap article section.integrated .general-info .graph-box {
+  margin-bottom: 0rem;
+}
+.contain .wrap article section.integrated .general-info .graph-box h3 {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.83333333rem;
+  padding-bottom: 0.83333333rem;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f4f1e7;
+}
+.contain .wrap article section.integrated .general-info .graph-box .graph1,
+.contain .wrap article section.integrated .general-info .graph-box .graph2 {
+  text-align: center;
+  width: 21.11111111rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contain .wrap article section.integrated .general-info .graph-box .graph1 canvas,
+.contain .wrap article section.integrated .general-info .graph-box .graph2 canvas {
+  width: 100%;
+  display: inline-block !important;
+}
+.contain .wrap article section.integrated .general-info .graph-box .min15 {
+  margin-top: 1.94444444rem;
+}
+.contain .wrap article section.integrated .event-info {
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  padding-top: 1.11111111rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.11111111rem;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  margin-top: 0.55555556rem;
+  text-align: center;
+  max-width: 103.33333333rem;
+}
+.contain .wrap article section.integrated .event-info .tit {
+  font-size: 1.11111111rem;
+  color: #333;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.83333333rem;
+}
+.contain .wrap article section.integrated .event-info table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.contain .wrap article section.integrated .event-info table tr th,
+.contain .wrap article section.integrated .event-info table tr td {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  line-height: 2.66666667rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated .event-info table tr th {
+  color: #fff;
+  background-color: #b3cae8;
+}
+.contain .wrap article section.integrated .event-info table tr th:first-child {
+  border-radius: 0.22222222rem 0 0 0.22222222rem;
+}
+.contain .wrap article section.integrated .event-info table tr th:last-child {
+  border-radius: 0 0.22222222rem 0.22222222rem 0;
+}
+.contain .wrap article section.integrated .event-info table tr td {
+  font-size: 0.88888889rem;
+  border-bottom: 2px solid #f4f1e7;
+}
+.contain .wrap article section.integrated .event-info .pagination {
+  display: inline-block;
+  position: relative;
+  left: 0rem;
+  bottom: 0rem;
+  right: auto;
+  top: auto;
+  margin-top: 0.83333333rem;
 }
 .contain .wrap article section.integrated .input {
   display: inline-block;
@@ -2512,6 +2814,1316 @@ input[type="number"]::-webkit-inner-spin-button {
 .contain .wrap article section.integrated.search .garage.vehicle .wrap-ul .vehicle-tit {
   display: inline-block !important;
   width: 100%;
+}
+.contain .wrap article section.integrated.record .garage {
+  text-align: left;
+  height: auto;
+  margin-left: 8.88888889rem;
+}
+.contain .wrap article section.integrated.record .garage .top-wrap {
+  zoom: 1;
+}
+.contain .wrap article section.integrated.record .garage .top-wrap:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.contain .wrap article section.integrated.record .garage .top-wrap .search-top {
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.record .garage .top-wrap .search-top .dmy {
+  margin-bottom: 1.94444444rem;
+}
+.contain .wrap article section.integrated.record .garage .top-wrap .exel-down {
+  font-size: 0.88888889rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  width: 6.33333333rem;
+  height: 1.77777778rem;
+  line-height: 1.77777778rem;
+  background-color: #999;
+  border-radius: 0.22222222rem;
+  float: right;
+}
+.contain .wrap article section.integrated.record .garage h2 {
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.record .garage h2.h2-tit {
+  margin-top: -3.05555556rem;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul {
+  height: auto;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li {
+  height: 2.55555556rem;
+  line-height: 2.55555556rem;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(1),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(5) {
+  width: 7.4%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(2),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(3) {
+  width: 8.6%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(4) {
+  width: 6.2%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(6),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(7),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(8),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(9),
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(10) {
+  width: 8.9%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(11) {
+  width: 9.6%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul ul li p:nth-child(12) {
+  width: 7.7%;
+}
+.contain .wrap article section.integrated.record .garage .wrap-ul .pagination {
+  margin-top: 0.83333333rem;
+}
+.contain .wrap article section.integrated.record .garage .vcb {
+  padding-top: 1.66666667rem;
+  padding-right: 1.66666667rem;
+  padding-bottom: 1.11111111rem;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  margin-top: 1.11111111rem;
+}
+.contain .wrap article section.integrated.record .garage .vcb h2 {
+  padding-left: 0rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.66666667rem;
+}
+.contain .wrap article section.integrated.record .garage .vcb .btns {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75%;
+}
+.contain .wrap article section.integrated.record .garage .vcb .btns .graph-btn {
+  font-size: 0.88888889rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  width: 10%;
+  height: 1.77777778rem;
+  line-height: 1.77777778rem;
+  background-color: #999;
+  border-radius: 0.22222222rem;
+  margin-right: 0.11111111rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.record .garage .vcb .btns .graph-btn.on {
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.record .garage .vcb .graph {
+  width: 100%;
+  height: 16.66666667rem;
+  margin-top: 1.38888889rem;
+}
+.contain .wrap article section.integrated.record .garage .vcb .graph canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.contain .wrap article section.integrated.record .garage .event-info .pagination a {
+  background-color: #f4f4f3;
+}
+.contain .wrap article section.integrated.history {
+  height: auto;
+}
+.contain .wrap article section.integrated.history .garage {
+  width: 50rem;
+  margin-left: 13.33333333rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap {
+  padding-top: 1.66666667rem;
+  padding-right: 1.66666667rem;
+  padding-bottom: 1.11111111rem;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap h2 {
+  margin-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li {
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+  margin-bottom: 0.27777778rem;
+  border-radius: 0.22222222rem;
+  width: 34.72222222rem;
+  overflow: hidden;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f4f4f3;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li p.tit {
+  text-align: center;
+  width: 10.16666667rem;
+  background-color: #b3cae8;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li p + p {
+  padding-right: 1.11111111rem;
+  box-sizing: border-box;
+  width: 24.55555556rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell {
+  width: 17.22222222rem;
+  margin-right: 0.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .tit {
+  background-color: #b3cae8;
+  display: inline-block;
+  vertical-align: top;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control {
+  display: inline-block;
+  vertical-align: top;
+  width: 7.05555556rem;
+  height: 2.77777778rem;
+  border-radius: 0 0.22222222rem 0.22222222rem 0;
+  overflow: hidden;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control .c-view {
+  display: inline-block;
+  vertical-align: top;
+  width: 4.88888889rem;
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+  margin-right: 0.05555556rem;
+  padding-right: 0.55555556rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control .inc-dec {
+  display: inline-block;
+  vertical-align: top;
+  width: 2.11111111rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control .inc-dec a {
+  width: 2.11111111rem;
+  height: 1.33333333rem;
+  display: block;
+  margin-bottom: 0.05555556rem;
+  text-align: center;
+  position: relative;
+  background-color: #f4f4f3;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control .inc-dec a.dec {
+  margin-bottom: 0rem;
+  height: 1.38888889rem;
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell .control .inc-dec a img {
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.contain .wrap article section.integrated.history .garage .box-wrap ul li .li-cell + .li-cell {
+  border-radius: 0.22222222rem;
+  margin-right: 0rem;
+}
+.contain .wrap article section.integrated.history .garage .notice {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  padding-top: 0.83333333rem;
+  padding-right: 0rem;
+  padding-bottom: 2.22222222rem;
+  padding-left: 2.22222222rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap {
+  padding-bottom: 2.22222222rem;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap ul {
+  margin-bottom: 2.22222222rem;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap ul li .li-cell p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap ul li .li-cell p + p {
+  width: 7.05555556rem;
+  border-radius: 0 0.22222222rem 0.22222222rem 0;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap label {
+  margin-right: 2.22222222rem;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap label input[type=radio] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap label input[type=radio]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap label input {
+  display: none;
+}
+.contain .wrap article section.integrated.history .garage .notice + .box-wrap label s {
+  font-size: 1rem;
+  line-height: 1.22222222rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.44444444rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.billboard .garage {
+  width: 54.44444444rem;
+  height: auto;
+}
+.contain .wrap article section.integrated.billboard .garage label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.44444444rem;
+  margin-top: 0.27777778rem;
+  margin-right: 0rem;
+  margin-bottom: 0.27777778rem;
+  margin-left: 0rem;
+}
+.contain .wrap article section.integrated.billboard .garage label input[type=checkbox] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.billboard .garage label input[type=radio] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.billboard .garage label input[type=checkbox]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.billboard .garage label input[type=radio]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.billboard .garage label input {
+  display: none;
+}
+.contain .wrap article section.integrated.billboard .garage label s {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.27777778rem;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li {
+  width: 100%;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li p.tit {
+  width: 12.77777778rem;
+  padding-left: 1.38888889rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li p + p {
+  width: 38.33333333rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status {
+  background-color: #f4f4f3;
+  height: auto;
+  line-height: normal;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell {
+  width: 12.77777778rem;
+  padding-top: 1.11111111rem;
+  padding-right: 0rem;
+  padding-bottom: 0.55555556rem;
+  padding-left: 0rem;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .txt {
+  padding-left: 1.38888889rem;
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 0.83333333rem;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend {
+  padding-left: 1.38888889rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p {
+  font-size: 0.77777778rem;
+  color: #333;
+  width: 5.55555556rem;
+  margin-bottom: 0.44444444rem;
+  text-align: left;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p s {
+  width: 0.83333333rem;
+  height: 0.83333333rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.33333333rem;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p:nth-child(1) s {
+  background-color: #1991d6;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p:nth-child(2) s {
+  background-color: #ff0505;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p:nth-child(3) s {
+  background-color: #ff9c00;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell .legend p:nth-child(4) s {
+  background-color: #8e8e8e;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell + .cell {
+  width: 38.33333333rem;
+  padding: 0.44444444rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell + .cell span {
+  font-size: 0.88888889rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  width: 6.16666667rem;
+  height: 2.83333333rem;
+  line-height: 2.83333333rem;
+  border-radius: 0.22222222rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0rem;
+  margin-right: 0.05555556rem;
+  margin-bottom: 0.05555556rem;
+  margin-left: 0rem;
+  background-color: #1991d6;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell + .cell span.standby {
+  background-color: #ff9c00;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell + .cell span.charging {
+  background-color: #ff0505;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap ul li.status .cell + .cell span.maintenance {
+  background-color: #8e8e8e;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap {
+  margin-top: 0.27777778rem;
+  padding-top: 0.55555556rem;
+  padding-right: 1.66666667rem;
+  padding-bottom: 0.55555556rem;
+  padding-left: 1.66666667rem;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0rem;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .route-select {
+  margin-left: 3.33333333rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .route-select p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .route-select .select {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0rem;
+  margin-right: 0.55555556rem;
+  margin-bottom: 0rem;
+  margin-left: 1.11111111rem;
+  position: relative;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .route-select .select select {
+  font-size: 1.11111111rem;
+  color: #333;
+  font-weight: 500;
+  width: 8.5rem;
+  height: 2.44444444rem;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  text-align: center;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .route-select .select:after {
+  content: '';
+  display: block;
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/decrease.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.66666667rem;
+  top: 0.88888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .label-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 20.66666667rem;
+}
+.contain .wrap article section.integrated.billboard .garage .box-wrap + .box-wrap .submit {
+  vertical-align: middle;
+  margin-left: 0.83333333rem;
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.billboard .garage .route-tit {
+  margin-top: 1.66666667rem;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul {
+  height: 13.33333333rem;
+  overflow: auto;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul li {
+  height: 2.55555556rem;
+  line-height: 2.55555556rem;
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul li label {
+  width: 14.22222222rem;
+  margin: 0rem;
+  line-height: normal;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul li label s {
+  margin-left: 1.38888889rem;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul li .list {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap ul li .list span {
+  font-size: 0.88888889rem;
+  font-weight: 500;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  width: 6.05555556rem;
+  height: 1.72222222rem;
+  text-align: center;
+  line-height: 1.72222222rem;
+  margin-right: 0.05555556rem;
+  background-color: #f4f4f3;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap .btns {
+  text-align: right;
+  margin-top: 0.83333333rem;
+  margin-right: 0rem;
+  margin-bottom: 1.38888889rem;
+  margin-left: 0rem;
+  padding-right: 1.66666667rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.billboard .garage .list-wrap .btns .del {
+  margin-left: 0.83333333rem;
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.schedule {
+  padding-top: 2.77777778rem;
+  padding-right: 1.66666667rem;
+  padding-bottom: 1.66666667rem;
+  padding-left: 1.66666667rem;
+  box-sizing: border-box;
+  height: auto;
+  min-width: 83.33333333rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper {
+  margin-left: 13.33333333rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5.55555556rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 0.22222222rem;
+  text-align: center;
+  margin-bottom: 0.27777778rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-select {
+  text-align: center;
+  margin-top: 1.38888889rem;
+  margin-right: 0rem;
+  margin-bottom: 0.55555556rem;
+  margin-left: 0rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-select p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.11111111rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-select .select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-select .select:after {
+  content: '';
+  display: block;
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/decrease.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.55555556rem;
+  top: 0.88888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-select .select select {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 10.16666667rem;
+  height: 2.44444444rem;
+  line-height: 2.44444444rem;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  padding-left: 0.83333333rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-drag {
+  text-align: left;
+  width: 23.33333333rem;
+  height: 7.55555556rem;
+  overflow: auto;
+  display: inline-block;
+  z-index: 1;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .calendar-wrap .route-drag p {
+  font-size: 0.88888889rem;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.11111111rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+  width: 7.22222222rem;
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable {
+  width: 26.11111111rem;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  margin-bottom: 0.27777778rem;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable .cell {
+  width: 50%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable .cell p {
+  font-size: 1rem;
+  font-weight: 700;
+  width: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable .cell .select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable .cell .select select {
+  font-size: 1.11111111rem;
+  color: #333;
+  font-weight: 500;
+  width: 6.61111111rem;
+  height: 2.44444444rem;
+  border: 1px solid #d6d6d6;
+  text-align: left;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .timetable .cell .select:after {
+  content: '';
+  display: block;
+  width: 0.77777778rem;
+  height: 0.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/decrease.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.66666667rem;
+  top: 1.33333333rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .schedule-wrap .btn {
+  background-color: #115abc;
+  display: inline-block;
+  margin-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .tit {
+  width: 33.33333333rem;
+  height: 2.77777778rem;
+  line-height: 2.77777778rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+  margin-bottom: 0.33333333rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .tit p {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .tit p:nth-child(1) {
+  width: 9.44444444rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .tit p:nth-child(2) {
+  width: 9.44444444rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .tit p:nth-child(3) {
+  width: 14.44444444rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul {
+  height: 37.16666667rem;
+  overflow: auto;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li {
+  width: 33.33333333rem;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  border-radius: 0.22222222rem;
+  background-color: #fff;
+  margin-bottom: 0.11111111rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li:hover {
+  background-color: #f6f9fe;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li p {
+  font-size: 1.11111111rem;
+  font-weight: 500;
+  text-align: center;
+  width: 9.44444444rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li .drop-box {
+  width: 9.44444444rem;
+  height: 2.44444444rem;
+  line-height: 2.44444444rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li .drop-box p {
+  font-size: 0.88888889rem;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.11111111rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+  width: 7.22222222rem;
+  height: 1.66666667rem;
+  line-height: 1.66666667rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap ul li .drop-box + p {
+  width: 14.44444444rem;
+}
+.contain .wrap article section.integrated.schedule .schedule-wrapper .route-drop-wrap .btn {
+  background-color: #115abc;
+  display: inline-block;
+  margin-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated.schedule .event-info {
+  margin-top: 1.66666667rem;
+}
+.contain .wrap article section.integrated.admin-wrap {
+  height: auto;
+  min-width: 97.22222222rem;
+}
+.contain .wrap article section.integrated.admin-wrap h2 {
+  font-size: 1.66666667rem;
+  font-weight: 700;
+  color: #333;
+  text-align: left;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0rem;
+  margin-right: 5.55555556rem;
+  margin-bottom: 0rem;
+  margin-left: 13.33333333rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .box-wrap {
+  width: 26.11111111rem;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  padding-top: 1.66666667rem;
+  padding-right: 1.11111111rem;
+  padding-bottom: 2.77777778rem;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .box-wrap .input-wrap {
+  margin-top: 2.22222222rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .box-wrap .input-wrap p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .box-wrap .input-wrap input {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 10.16666667rem;
+  height: 2.44444444rem;
+  line-height: 2.44444444rem;
+  padding-left: 0.83333333rem;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0rem;
+  margin-right: 1.11111111rem;
+  margin-bottom: 0rem;
+  margin-left: 1.11111111rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .box-wrap .input-wrap .btn {
+  background-color: #115abc;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap {
+  margin-top: 2.5rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap h2 {
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+  margin-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul {
+  height: 13.33333333rem;
+  overflow: auto;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li {
+  width: 26.11111111rem;
+  height: 2.55555556rem;
+  margin-bottom: 0.11111111rem;
+  padding-top: 0.66666667rem;
+  padding-right: 1.11111111rem;
+  padding-bottom: 0.66666667rem;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li:hover {
+  background-color: #f6f9fe;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li label input[type=checkbox] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li label input[type=checkbox]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li label input {
+  display: none;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap ul li label s {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1.38888889rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap .btns {
+  text-align: right;
+  margin-top: 0.83333333rem;
+}
+.contain .wrap article section.integrated.admin-wrap .admin-group .list-wrap .btns .edit {
+  background-color: #115abc;
+  margin-left: 0.83333333rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting {
+  display: inline-block;
+  vertical-align: top;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting h2 {
+  padding-left: 1.38888889rem;
+  box-sizing: border-box;
+  margin-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit {
+  width: 46.66666667rem;
+  height: 2.55555556rem;
+  line-height: 2.55555556rem;
+  border-radius: 0.22222222rem;
+  background-color: #b3cae8;
+  margin-bottom: 0.11111111rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(1) {
+  width: 4.44444444rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(2) {
+  width: 11.66666667rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(3) {
+  width: 15rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(4) {
+  width: 3.88888889rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(5) {
+  width: 3.88888889rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(6) {
+  width: 3.88888889rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .tit p:nth-child(7) {
+  width: 3.88888889rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul {
+  height: 34.66666667rem;
+  overflow: auto;
+  margin-bottom: 0.83333333rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li {
+  width: 46.66666667rem;
+  height: 2.55555556rem;
+  line-height: 2.55555556rem;
+  border-radius: 0.22222222rem;
+  background-color: #fff;
+  margin-bottom: 0.11111111rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li:hover {
+  background-color: #f6f9fe;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li p:nth-child(1) {
+  width: 4.44444444rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li p:nth-child(2) {
+  width: 13.88888889rem;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li p:nth-child(3) {
+  width: 12.77777778rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.88888889rem;
+  text-align: center;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li label input[type=checkbox] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li label input[type=checkbox]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting ul li label input {
+  display: none;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .btns {
+  text-align: right;
+  padding-right: 0.83333333rem;
+}
+.contain .wrap article section.integrated.admin-wrap .page-setting .btns .btn {
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.admin-wrap .event-info {
+  margin-top: 2.22222222rem;
+}
+.contain .wrap article section.integrated.inspection {
+  min-width: 101.66666667rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2.66666667rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .schedule-wrap {
+  margin-right: 0rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .schedule-wrap .calendar-wrap {
+  padding-bottom: 0rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .schedule-wrap .calendar-wrap .calendar {
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box {
+  width: 26.11111111rem;
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  padding-top: 0.55555556rem;
+  padding-right: 1.11111111rem;
+  padding-bottom: 0.55555556rem;
+  padding-left: 1.11111111rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li {
+  margin-bottom: 0.33333333rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li:nth-child(3) p {
+  vertical-align: top;
+  margin-top: 0.55555556rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  width: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li input[type=text],
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li div,
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li textarea {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  width: 18.55555556rem;
+  height: 2.44444444rem;
+  line-height: 2.44444444rem;
+  border: 1px solid #d6d6d6;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li textarea {
+  height: 5.11111111rem;
+  line-height: normal;
+  overflow: auto;
+  outline: none;
+  font-family: GmarketSans, sans-serif;
+  padding: 0.83333333rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li .date-input {
+  position: relative;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li .date-input:after {
+  content: '';
+  display: block;
+  width: 1.83333333rem;
+  height: 1.61111111rem;
+  background-repeat: no-repeat;
+  background-image: url('../img/date.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.72222222rem;
+  top: 0.38888889rem;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li .date-input input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: none;
+  padding-left: 0rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 4.72222222rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li label input[type=radio] + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chk-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li label input[type=radio]:checked + i {
+  width: 1.27777778rem;
+  height: 1.27777778rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/chkd-b.png');
+  background-size: contain;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li label input {
+  display: none;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .inspection-box ul li label s {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.27777778rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .btns {
+  text-align: center;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .btns a {
+  margin: 0.55555556rem;
+}
+.contain .wrap article section.integrated.inspection .schedule-wrapper .inspection-wrap .btns a.submit {
+  background-color: #115abc;
+}
+.contain .wrap article section.integrated.inspection .checklist {
+  width: 55rem;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+}
+.contain .wrap article section.integrated.inspection .checklist:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.contain .wrap article section.integrated.inspection .checklist h2 {
+  font-size: 1.66666667rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.55555556rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit {
+  height: 2.55555556rem;
+  line-height: 2.55555556rem;
+  background-color: #b3cae8;
+  border-radius: 0.22222222rem;
+  margin-bottom: 0.11111111rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit p:nth-child(1) {
+  width: 8.88888889rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit p:nth-child(2) {
+  width: 27.77777778rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit p:nth-child(3) {
+  width: 5.55555556rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .tit p:nth-child(4) {
+  width: 12.77777778rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul {
+  background-color: #fff;
+  border-radius: 0.22222222rem;
+  height: 35rem;
+  overflow: auto;
+  padding-top: 0rem;
+  padding-right: 0.83333333rem;
+  padding-bottom: 0rem;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li {
+  border-bottom: 1px solid #e5e5e5;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li:last-child {
+  border-bottom: 0;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 0.83333333rem;
+  box-sizing: border-box;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .p1 {
+  width: 8.88888889rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .chk-txt {
+  display: inline-block;
+  vertical-align: middle;
+  width: 43.61111111rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .chk-txt ul li {
+  height: 2.22222222rem;
+  line-height: 2.22222222rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .chk-txt ul li p:nth-child(1) {
+  width: 26.66666667rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .chk-txt ul li p:nth-child(2) {
+  width: 6.66666667rem;
+  text-align: center;
+  padding-left: 0rem;
+}
+.contain .wrap article section.integrated.inspection .checklist > ul li .chk-txt ul li p:nth-child(3) {
+  width: 9.72222222rem;
+  text-align: center;
+  padding-left: 1.38888889rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .exel-down {
+  font-size: 0.88888889rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  width: 6.33333333rem;
+  height: 1.77777778rem;
+  line-height: 1.77777778rem;
+  background-color: #999;
+  border-radius: 0.22222222rem;
+  float: left;
+  margin-top: 0.83333333rem;
+}
+.contain .wrap article section.integrated.inspection .checklist .btn {
+  background-color: #115abc;
+  float: right;
+  margin-top: 0.55555556rem;
 }
 .contain .wrap article section.dispenser {
   height: calc(100vh - 80px);
@@ -4561,17 +6173,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .contain .wrap article.aside-on .integrated.car-list .garage {
   width: 78.88888889rem;
-  margin-left: 18.83333333rem;
+  margin-left: 13.88888889rem;
 }
 .contain .wrap article.aside-on .integrated.search .garage {
   width: 85rem;
   margin-left: 9.44444444rem;
 }
 .contain .wrap.p04 {
-  min-width: 95.55555556rem;
+  min-width: 87.77777778rem;
 }
 .contain .wrap.p04 header {
-  min-width: 95.55555556rem;
+  min-width: 87.77777778rem;
 }
 .contain .wrap.p04 article section {
   position: relative;
@@ -4582,6 +6194,9 @@ input[type="number"]::-webkit-inner-spin-button {
   display: inline-block;
   vertical-align: top;
   height: auto;
+  margin-left: calc(50% - 820px);
+  padding-left: 2.77777778rem;
+  box-sizing: border-box;
 }
 .contain .wrap.p04 article section .map-wrap .remarks {
   display: inline-block;
@@ -4683,5 +6298,33 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .contain .wrap.p35 {
   height: auto;
+}
+.contain .wrap.p37 header {
+  min-width: auto;
+  width: 100%;
+}
+.contain .wrap.p37 article section.integrated {
+  height: auto;
+  min-width: 83.33333333rem;
+}
+.contain .wrap.p37 article section.integrated .garage {
+  width: 100%;
+  margin-left: 0rem;
+  padding-left: 4.44444444rem;
+  box-sizing: border-box;
+}
+.contain .wrap.p37 article.aside-on section.integrated .garage {
+  width: auto;
+}
+.contain .wrap.p38 article section,
+.contain .wrap.p39 article section,
+.contain .wrap.p40 article section {
+  min-width: 72.22222222rem;
+}
+@media screen and (max-width: 1920px) {
+  .contain .wrap aside {
+    left: 0rem;
+    margin-left: 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

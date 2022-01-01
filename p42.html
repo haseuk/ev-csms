@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="datepicker/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="datepicker/jquery-ui.min.js"></script>
+  <script src="datepicker/datepicker-ko.js"></script>
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap p42">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>설정 : 배차 시간표</h3>
+          <a class="area-name">서울 보성운수 차고지 정보 ></a>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li><a href="p18.html">차고지 현황</a></li>
+            <li class="active"><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li class="active"><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="integrated schedule inspection">
+          <div class="schedule-wrapper">
+            <div class="schedule-wrap">
+              <div class="calendar-wrap">
+                <div class="calendar">
+                  <div class="clicked-date">
+                    <div class="cal-day"></div>
+                    <div class="cal-date"></div>
+                  </div>
+                  <div class="calendar-box">
+                    <div class="ymd">
+                      <p class="y"><s></s>년</p>
+                      <p class="m"><s></s>월</p>
+                      <p class="d"><s></s>일</p>
+                    </div>
+                    <div class="ctr-box clearfix">
+                      <button type="button" title="prev" class="btn-cal prev">
+                      </button>
+                      <span class="cal-year"></span>
+                      <span class="cal-month"></span>
+                      <button type="button" title="next" class="btn-cal next">
+                      </button>
+                    </div>
+                    <table class="cal-table">
+                      <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                      </thead>
+                      <tbody class="cal-body"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inspection-wrap">
+              <div class="inspection-box">
+                <ul>
+                  <li>
+                    <p>점 검 일</p>
+                    <div class="date-input">
+                      <input type="text" name="date" id="date1" size="12" placeholder="yyyy-mm-dd">
+                    </div>
+                  </li>
+                  <li>
+                    <p>점검대상</p>
+                    <input type="text">
+                  </li>
+                  <li>
+                    <p>점검사항</p>
+                    <textarea></textarea>
+                  </li>
+                  <li>
+                    <p>점검결과</p>
+                    <div>
+                      <label>
+                        <input type="radio" name="inspection">
+                        <i></i>
+                        <s>양호</s>
+                      </label>
+                      <label>
+                        <input type="radio" name="inspection">
+                        <i></i>
+                        <s>불량</s>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <p>조치</p>
+                    <input type="text">
+                  </li>
+                  <li>
+                    <p>점검자</p>
+                    <input type="text">
+                  </li>
+                </ul>
+              </div>
+              <div class="btns">
+                <a class="btn del">삭제</a>
+                <a class="btn submit">적용</a>
+              </div>
+            </div>
+          </div>
+          <div class="checklist">
+            <h2>전기안전 점검표</h2>
+            <div class="tit">
+              <p>점검대상</p>
+              <p>점 검 사 항</p>
+              <p>점검결과</p>
+              <p>조치</p>
+            </div>
+            <ul>
+              <li>
+                <p class="p1">LBS</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>단자 및 접속부 변형 유무</p><p>불량</p><p>교체</p></li>
+                    <li><p>단자 및 케이블 과열 이완상태</p><p>양호</p><p>교체</p></li>
+                    <li><p>각종 부위 부식 상태</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">차단기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>내부온도  및 과열 흔적 상태</p><p>불량</p><p>교체</p></li>
+                    <li><p>조작 및 제어 상태</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">변압기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>붓싱변형 균열 유무 상태</p><p>양호</p><p>교체</p></li>
+                    <li><p>절연불 손상 상태</p><p>양호</p><p>교체</p></li>
+                    <li><p>내부 오염 상태</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">콘덴서</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>접지선 결속 상태</p><p>양호</p><p>교체</p></li>
+                    <li><p>변형 손상 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>단자의 과열 및 단자의 손상유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">피뢰침</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>변형 및 접지선 경선 상태</p><p>양호</p><p>교체</p></li>
+                    <li><p>단자의 이완 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>불량</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <p class="p1">계기용 변성기</p>
+                <div class="chk-txt">
+                  <ul>
+                    <li><p>부식 과열 변색 유무</p><p>양호</p><p>교체</p></li>
+                    <li><p>접속부 과열 이완 유무</p><p>불량</p><p>교체</p></li>
+                    <li><p>애자의 손상 유무</p><p>양호</p><p>교체</p></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <a class="exel-down">엑셀다운로드</a>
+            <a class="btn">저장</a>
+          </div>
+          <div class="event-info">
+            <p class="tit">이벤트 정보</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <colgroup>
+                <col width="15%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="17%">
+                <col width="13%">
+                <col width="11.5%">
+              </colgroup>
+              <tr>
+                <th>발생시간</th>
+                <th>수위</th>
+                <th>장애메시지</th>
+                <th>장애원인</th>
+                <th>최초발생시간</th>
+                <th>해결상태</th>
+                <th>중복횟수</th>
+              </tr>
+              <tr>
+                <td>2022-1-20/18시 35분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-20/18시 35분</td>
+                <td>보수중</td>
+                <td>2회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/17시 05분</td>
+                <td>C</td>
+                <td>충전오류</td>
+                <td>콘센트불량</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>완료</td>
+                <td>1회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/09시 55분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>보수중</td>
+                <td>30회</td>
+              </tr>
+            </table>
+            <div class="pagination">
+              <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+              <p><span>1</span> / <span>4</span></p>
+              <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="js/calendar.js"></script>
+  <script>
+    $(function(){
+      $("#date1").datepicker();
+    });
+  </script>
+</body>
+</html>
+

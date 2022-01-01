@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/style.css">
   <title>EV_CSMS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <body>
   <div class="contain">
@@ -34,79 +35,436 @@
 
       <article>
         <section class="integrated">
-          <div class="status-wrap">
-            <div class="list">
-              <h3>전체 현황 (<s>32</s>)</h3>
-              <a href="p05.html" class="more"><img src="img/ico-4.png" alt=""></a>
-              <table>
-                <colgroup>
-                  <col width="135px">
-                  <col width="130px">
-                  <col width="130px">
-                </colgroup>
-                <tr>
-                  <td></td>
-                  <td>어제</td>
-                  <td>오늘</td>
-                </tr>
-                <tr>
-                  <th>전체 충전량</th>
-                  <td class="t2">28,624</td>
-                  <td class="t1">38,344</td>
-                </tr>
-                <tr>
-                  <th>경부하</th>
-                  <td class="t2">16,564</td>
-                  <td class="t1">16,248</td>
-                </tr>
-                <tr>
-                  <th>중부하</th>
-                  <td class="t2">6,572</td>
-                  <td class="t1">6,567</td>
-                </tr>
-                <tr>
-                  <th>최대 부하</th>
-                  <td class="t2">7,016</td>
-                  <td class="t1">7,642</td>
-                </tr>
-              </table>
-              <p class="unit">단위(kWh)</p>
+          <div class="chk-wrap">
+            <div class="area-chk-list chk-list">
+              <h3>전체 (<s>10</s>)</h3>
+              <div class="input">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a><img src="img/ico-7.png" alt=""></a>
+              </div>
+              <ul>
+                <li>
+                  <a>
+                    <p>[경기]  수원남부버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  부천버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  수원남부버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li class="check">
+                  <a>
+                    <p>[경기]  부천버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  수원남부버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li class="check">
+                  <a>
+                    <p>[경기]  부천버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  수원남부버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  부천버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  수원남부버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기]  부천버스공영차고지</p>
+                    <div class="area-status">
+                      <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>설치일</th>
+                        <td>2021.11.24</td>
+                      </tr>
+                      <tr>
+                        <th>경부하</th>
+                        <td>1,279 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>중부하</th>
+                        <td>2,575 kWh</td>
+                      </tr>
+                      <tr>
+                        <th>최대 부하</th>
+                        <td>1,245 kWh</td>
+                      </tr>
+                    </table>
+                    <a>모니터링 바로가기</a>
+                  </div>
+                </li>
+              </ul>
+              <div class="pagination">
+                <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+                <p><span>1</span> / <span>4</span></p>
+                <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+              </div>
             </div>
-            <div class="list">
-              <h3>전체 현황 (<s>32</s>)</h3>
-              <table>
-                <colgroup>
-                  <col width="135px">
-                  <col width="130px">
-                  <col width="130px">
-                </colgroup>
-                <tr>
-                  <td></td>
-                  <td>어제</td>
-                  <td>오늘</td>
-                </tr>
-                <tr>
-                  <th>전체 충전량</th>
-                  <td class="t2">28,624</td>
-                  <td class="t1">38,344</td>
-                </tr>
-                <tr>
-                  <th>경부하</th>
-                  <td class="t2">16,564</td>
-                  <td class="t1">16,248</td>
-                </tr>
-                <tr>
-                  <th>중부하</th>
-                  <td class="t2">6,572</td>
-                  <td class="t1">6,567</td>
-                </tr>
-                <tr>
-                  <th>최대 부하</th>
-                  <td class="t2">7,016</td>
-                  <td class="t1">7,642</td>
-                </tr>
-              </table>
-              <p class="unit">단위(kWh)</p>
+            <div class="route-chk-list chk-list">
+              <h3>노선현황</h3>
+              <div class="input">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a><img src="img/ico-7.png" alt=""></a>
+              </div>
+              <ul>
+                <li>
+                  <a>
+                    <p>[경기] 5124</p>
+                    <div class="area-status">
+                      <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>평균 주행거리 :</th>
+                        <td>54km</td>
+                      </tr>
+                      <tr>
+                        <th>평균 주행시간 :</th>
+                        <td> 120분</td>
+                      </tr>
+                      <tr>
+                        <th>배차간격 :</th>
+                        <td>20분</td>
+                      </tr>
+                      <tr>
+                        <th>버스 대수 :</th>
+                        <td>10대</td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기] 5200</p>
+                    <div class="area-status">
+                      <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>평균 주행거리 :</th>
+                        <td>54km</td>
+                      </tr>
+                      <tr>
+                        <th>평균 주행시간 :</th>
+                        <td> 120분</td>
+                      </tr>
+                      <tr>
+                        <th>배차간격 :</th>
+                        <td>20분</td>
+                      </tr>
+                      <tr>
+                        <th>버스 대수 :</th>
+                        <td>10대</td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기] 5100</p>
+                    <div class="area-status">
+                      <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>평균 주행거리 :</th>
+                        <td>54km</td>
+                      </tr>
+                      <tr>
+                        <th>평균 주행시간 :</th>
+                        <td> 120분</td>
+                      </tr>
+                      <tr>
+                        <th>배차간격 :</th>
+                        <td>20분</td>
+                      </tr>
+                      <tr>
+                        <th>버스 대수 :</th>
+                        <td>10대</td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+                <li>
+                  <a>
+                    <p>[경기] 5100</p>
+                    <div class="area-status">
+                      <img src="img/ico-3.png" alt="">
+                    </div>
+                  </a>
+                  <div class="cont">
+                    <table>
+                      <tr>
+                        <th>평균 주행거리 :</th>
+                        <td>54km</td>
+                      </tr>
+                      <tr>
+                        <th>평균 주행시간 :</th>
+                        <td> 120분</td>
+                      </tr>
+                      <tr>
+                        <th>배차간격 :</th>
+                        <td>20분</td>
+                      </tr>
+                      <tr>
+                        <th>버스 대수 :</th>
+                        <td>10대</td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ul>
+              <div class="pagination">
+                <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+                <p><span>1</span> / <span>4</span></p>
+                <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+              </div>
             </div>
           </div>
           <div class="map-wrap">
@@ -156,310 +514,113 @@
               <span class="area17">세종</span>
             </div>
           </div>
-          <div class="client">
-            <a class="list-btn"><p>사업자 보기 <img src="img/ico-3.png" alt=""></p></a>
-            <ul>
-              <li><a href="">인텍에프에이</a></li>
-            </ul>
-          </div>
-          <div class="area-chk-list">
-            <h3>전체 (<s>10</s>)</h3>
-            <div class="input">
-              <input type="text" placeholder="검색어를 입력하세요.">
-              <a><img src="img/ico-7.png" alt=""></a>
+          <div class="general-info">
+            <div class="d-day box">
+              <p class="tit">금일 누적 충전량</p>
+              <span class="kwh">kWh</span>
+              <div class="c-view">
+                <p>충전량</p>
+                <p class="amount">9,354</p>
+                <span>경</span>
+                <p class="amount">2,254</p>
+                <span>중</span>
+                <p class="amount">2,254</p>
+                <span>최</span>
+                <p class="amount">2,254</p>
+              </div>
             </div>
-            <ul>
-              <li>
-                <a>
-                  <p>[경기]  수원남부버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
+            <div class="efficiency box">
+              <p class="tit">충전효율</p>
+              <div class="graph">
+                <canvas id="doughnut-chart"></canvas>
+                <span class="data"></span>
+                <p>충전효율</p>
+              </div>
+              <div class="eff">
+                <div class="circle">23</div>
+                <p>충전효율</p>
+              </div>
+            </div>
+            <div class="status box">
+              <p class="tit">운전현황</p>
+              <p class="total">총 <s>7</s>개</p>
+              <div class="normal">
+                <div class="circle">5</div>
+                <p>정상</p>
+              </div>
+              <div class="breakdown">
+                <div class="circle">1</div>
+                <p>고장</p>
+              </div>
+              <div class="error">
+                <div class="circle">1</div>
+                <p>통신이상</p>
+              </div>
+            </div>
+            <div class="graph-box box">
+              <div class="hourly">
+                <h3>시간별충전량</h3>
+                <div class="graph1">
+                  <canvas id="hourly"></canvas>
                 </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  부천버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
+              </div>
+              <div class="min15">
+                <h3>15분단위 소비전력 예측</h3>
+                <div class="graph2">
+                  <canvas id="min15-chart"></canvas>
                 </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  수원남부버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li class="check">
-                <a>
-                  <p>[경기]  부천버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  수원남부버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li class="check">
-                <a>
-                  <p>[경기]  부천버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  수원남부버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  부천버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  수원남부버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-              <li>
-                <a>
-                  <p>[경기]  부천버스공영차고지</p>
-                  <div class="area-status">
-                    <s></s><span class="txt"></span> <img src="img/ico-3.png" alt="">
-                  </div>
-                </a>
-                <div class="cont">
-                  <table>
-                    <tr>
-                      <th>설치일</th>
-                      <td>2021.11.24</td>
-                    </tr>
-                    <tr>
-                      <th>경부하</th>
-                      <td>1,279 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>중부하</th>
-                      <td>2,575 kWh</td>
-                    </tr>
-                    <tr>
-                      <th>최대 부하</th>
-                      <td>1,245 kWh</td>
-                    </tr>
-                  </table>
-                  <a>모니터링 바로가기</a>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="event-info">
+            <p class="tit">이벤트 정보</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <colgroup>
+                <col width="15%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="17%">
+                <col width="13%">
+                <col width="11.5%">
+              </colgroup>
+              <tr>
+                <th>발생시간</th>
+                <th>수위</th>
+                <th>장애메시지</th>
+                <th>장애원인</th>
+                <th>최초발생시간</th>
+                <th>해결상태</th>
+                <th>중복횟수</th>
+              </tr>
+              <tr>
+                <td>2022-1-20/18시 35분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-20/18시 35분</td>
+                <td>보수중</td>
+                <td>2회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/17시 05분</td>
+                <td>C</td>
+                <td>충전오류</td>
+                <td>콘센트불량</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>완료</td>
+                <td>1회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/09시 55분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>보수중</td>
+                <td>30회</td>
+              </tr>
+            </table>
             <div class="pagination">
               <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
               <p><span>1</span> / <span>4</span></p>
@@ -471,6 +632,100 @@
     </div>
   </div>
   <script src="js/index.js"></script>
+  <script>
+    // 충전효율 도넛차트
+    let val = 87; // 충전효율 데이터 삽입
+    let doughnutData = [val,100 - val]
+    new Chart(document.getElementById("doughnut-chart"), {
+      type: 'doughnut',
+      data: {
+        datasets: [
+          {
+            backgroundColor: ["#02881e","#c6c6c6"],
+            data: doughnutData,
+            borderWidth: 0,
+          }
+        ]
+      },
+      options: {
+        cutoutPercentage: 70,
+      }
+    });
+
+    let data = document.querySelector('.data');
+    data.innerHTML = val + '%';
+
+    // 시간별 충전량
+    let data1 = [5,15,17,8,10,17,16]
+    new Chart(document.getElementById("hourly"), {
+      type: 'line',
+      data: {
+        labels: [0,1,2,3,4,5,6],
+        datasets: [
+          {
+            borderColor: "#4f81bd",
+            data: data1,
+            fill: false,
+            pointRadius: 0,
+            lineTension: 0
+          },
+        ]
+      },
+      options: {
+        responsive: false,
+        legend: {
+          display: false
+        },
+        aspectRatio: 2.5
+      }
+    });
+
+    // 15분 단위 소비전력
+    let data2 = [350,350,350,350,350,350,350,350,350,350,350] // 목표전력 값
+    let data3 = [0,50,100,150,200,250,250,250,250,250] // 기준 전력
+    let data4 = [0,25,45,60,70,80,90,100,100,100] // 예상 전력
+    let data5 = [125,125,125,125,125,125,125,125,125,125] // 15분 전 전력
+
+    new Chart(document.getElementById("min15-chart"), {
+      type: 'line',
+      data: {
+        labels: [1,92,183,274,365,456,547,638,729,820],
+        datasets: [
+          {
+            borderColor: "#115abc",
+            data: data3,
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#ffd350",
+            data: data2, // 목표 전력
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#65be93",
+            data: data4,
+            pointRadius: 0,
+            fill: false,
+          },
+          {
+            borderColor: "#cd549e",
+            data: data5,
+            pointRadius: 0,
+            fill: false,
+          }
+        ]
+      },
+      options: {
+        responsive: false,
+        legend: {
+          display: false
+        },
+        aspectRatio: 2.5
+      }
+    });
+  </script>
 </body>
 </html>
 

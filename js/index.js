@@ -43,7 +43,6 @@ if(listBtn)listBtn.addEventListener('click', function(e) {
   }
 });
 
-let areaList = document.querySelector('.area-chk-list');
 let listChild = document.querySelectorAll('.area-chk-list li');
 Array.prototype.forEach.call(listChild, function(e) {
   e.addEventListener('click', function() {
@@ -52,6 +51,20 @@ Array.prototype.forEach.call(listChild, function(e) {
     } else {
       for (let i = 0; i < listChild.length; i++) {
         listChild[i].classList.remove('on');
+      }
+      e.classList.add('on');
+    }
+  });
+});
+
+let routeChild = document.querySelectorAll('.route-chk-list li');
+Array.prototype.forEach.call(routeChild, function(e) {
+  e.addEventListener('click', function() {
+    if(e.className === 'on' || e.className === 'check on') {
+      e.classList.remove('on');
+    } else {
+      for (let i = 0; i < routeChild.length; i++) {
+        routeChild[i].classList.remove('on');
       }
       e.classList.add('on');
     }
@@ -93,6 +106,69 @@ if(del)del.addEventListener('click', function() {
 function chkdDel() {
   let chkd = document.querySelectorAll('input[type=checkbox]:checked');
   Array.prototype.forEach.call(chkd, function(e) {
-    e.parentElement.parentElement.remove();
+    if(e.parentElement.parentElement.nodeName === 'LI') {
+      e.parentElement.parentElement.remove();
+    }
   });
+}
+
+let tabs = document.querySelectorAll('.dmy li');
+let h2Tit = document.querySelector('.h2-tit s');
+let h2Graph = document.querySelector('.h2-graph s');
+let txtList = ['VCB','ACB','DC'];
+Array.prototype.forEach.call(tabs, function(e,idx) {
+  e.addEventListener('click', function() {
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('on');
+    }
+    e.classList.add('on');
+    if(idx === 0) {
+      h2Tit.innerHTML = txtList[0];
+      h2Graph.innerHTML = txtList[0];
+    } else if(idx === 1) {
+      h2Tit.innerHTML = txtList[1];
+      h2Graph.innerHTML = txtList[1];
+    } else {
+      h2Tit.innerHTML = txtList[2];
+      h2Graph.innerHTML = txtList[2];
+    }
+  })
+});
+
+let resultElement1 = document.querySelector('.history .c-view1 s');
+let resultElement2 = document.querySelector('.history .c-view2 s');
+let maxNum = 100;
+let minNum = 0;
+function count(type)  {
+  let number1 = resultElement1.innerText;
+  let number2 = resultElement2.innerText;
+  if(type === 'plus1') {
+    number1 = parseInt(number1) + 1;
+    if(number1 > maxNum) { return; }
+  } else if(type === 'minus1')  {
+    number1 = parseInt(number1) - 1;
+    if(number1 < minNum) { return; }
+  }
+  if(type === 'plus2') {
+    number2 = parseInt(number2) + 1;
+    if(number2 > maxNum) { return; }
+  } else if(type === 'minus2')  {
+    number2 = parseInt(number2) - 1;
+    if(number2 < minNum) { return; }
+  }
+  resultElement1.innerText = number1;
+  resultElement2.innerText = number2;
+}
+
+//p40 drag drop
+function allowDrop(e) {
+  e.preventDefault();
+}
+function drag(e) {
+  e.dataTransfer.setData("text", e.target.id);
+}
+function drop(e) {
+  e.preventDefault();
+  let data = e.dataTransfer.getData("text");
+  e.target.appendChild(document.getElementById(data));
 }

@@ -1,0 +1,33 @@
+@import "asset";
+
+.calendar-wrap { .ib; .vam; .w(470); .bgc(#fff); .p(30,10); .-box;
+  .calendar { .pb(20); .-box; .-b(#e5e5e5);
+    .clicked-date { .hide; }
+    .calendar-box { .p(0,25); .-box;
+      .ymd { .tc; .mb(20);
+        p { .fs(24); .bold; .mr(5); .ib; .vam;
+          &:last-child { .mr(0); }
+        }
+      }
+      .ctr-box { .fs(0); .tc;
+        .btn-cal { .wh(20,20); .rel; .m(0,15); float: none!important; .ib; .vam; .bgc(#fff);
+          &.prev:after { .cnt; .wh(9,10); .contain('../img/arrow-prev.png'); .abs; .lt(50%,50%); transform: translate(-50%,-50%); }
+          &.next:after { .cnt; .wh(9,10); .contain('../img/arrow-next.png'); .abs; .lt(50%,50%); transform: translate(-50%,-50%); }
+        }
+        span { .fs(13); .bold; color:#333; .ib; .vam; }
+      }
+      .cal-table {
+        tr {
+          th, td { .fs(13); .wh(55,33); .tc; }
+          th { .regular; }
+          td {
+            &:nth-child(1)  { color:#ff0000; }
+            &:nth-child(7)  { color:#000; }
+            &.today { .bold; .bgc(#daeef3); }
+            &.day-active { color:#fff; .bgc(#ff9494); }
+          }
+        }
+      }
+    }
+  }
+}

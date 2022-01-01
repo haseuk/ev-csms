@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+    <div class="wrap p40">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>설정 : 배차 시간표</h3>
+          <a class="area-name">서울 보성운수 차고지 정보 ></a>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li><a href="p18.html">차고지 현황</a></li>
+            <li class="active"><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li class="active"><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="integrated schedule">
+          <div class="schedule-wrapper">
+            <div class="schedule-wrap">
+              <div class="calendar-wrap">
+                <div class="calendar">
+                  <div class="clicked-date">
+                    <div class="cal-day"></div>
+                    <div class="cal-date"></div>
+                  </div>
+                  <div class="calendar-box">
+                    <div class="ymd">
+                      <p class="y"><s></s>년</p>
+                      <p class="m"><s></s>월</p>
+                      <p class="d"><s></s>일</p>
+                    </div>
+                    <div class="ctr-box clearfix">
+                      <button type="button" title="prev" class="btn-cal prev">
+                      </button>
+                      <span class="cal-year"></span>
+                      <span class="cal-month"></span>
+                      <button type="button" title="next" class="btn-cal next">
+                      </button>
+                    </div>
+                    <table class="cal-table">
+                      <thead>
+                      <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                      </tr>
+                      </thead>
+                      <tbody class="cal-body"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="route-select">
+                  <p>노선</p>
+                  <div class="select">
+                    <select>
+                      <option value="">5168 노선</option>
+                      <option value="">5100 노선</option>
+                      <option value="">5111 노선</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="route-drag drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag1">서울 74 사 1001</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag2">서울 74 사 1002</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag3">서울 74 사 1003</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag4">서울 74 사 1004</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag5">서울 74 사 1005</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag6">서울 74 사 1006</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag7">서울 74 사 1007</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag8">서울 74 사 1008</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag9">서울 74 사 1009</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag10">서울 74 사 1010</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag11">서울 74 사 1011</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag12">서울 74 사 1012</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag13">서울 74 사 1013</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag14">서울 74 사 1014</p>
+                  <p class="drag-item" draggable="true" ondragstart="drag(event)" id="drag15">서울 74 사 1015</p>
+                </div>
+              </div>
+              <div class="timetable">
+                <div class="cell">
+                  <p>첫 차</p>
+                  <div class="select">
+                    <select>
+                      <option value="">05:00</option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cell">
+                  <p>막 차</p>
+                  <div class="select">
+                    <select>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="timetable">
+                <div class="cell">
+                  <p>배차 간격</p>
+                  <div class="select">
+                    <select>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cell">
+                  <p>운행시간</p>
+                  <div class="select">
+                    <select>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <a class="btn">시간표 생성</a>
+            </div>
+
+            <div class="route-drop-wrap">
+              <div class="tit">
+                <p>출발시간</p>
+                <p>차량번호</p>
+                <p>운행시간</p>
+              </div>
+              <ul>
+                <li>
+                  <p>05:00</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>05:00 ~ 07:00</p>
+                </li>
+                <li>
+                  <p>05:20</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>05:20 ~ 07:20</p>
+                </li>
+                <li>
+                  <p>05:40</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>05:40 ~ 07:40</p>
+                </li>
+                <li>
+                  <p>06:00</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>06:00 ~ 06:20</p>
+                </li>
+                <li>
+                  <p>06:20</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>06:20 ~ 06:40</p>
+                </li>
+                <li>
+                  <p>06:40</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>06:40 ~ 07:00</p>
+                </li>
+                <li>
+                  <p>07:00</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>07:00 ~ 07:40</p>
+                </li>
+                <li>
+                  <p>07:20</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>07:20 ~ 07:40</p>
+                </li>
+                <li>
+                  <p>07:40</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>07:40 ~ 08:20</p>
+                </li>
+                <li>
+                  <p>08:00</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>08:00 ~ 09:00</p>
+                </li>
+                <li>
+                  <p>08:20</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>08:20 ~ 09:00</p>
+                </li>
+                <li>
+                  <p>08:40</p>
+                  <div class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <p>08:40 ~ 09:00</p>
+                </li>
+              </ul>
+              <a class="btn">저장</a>
+            </div>
+          </div>
+          <div class="event-info">
+            <p class="tit">이벤트 정보</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <colgroup>
+                <col width="15%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="14.5%">
+                <col width="17%">
+                <col width="13%">
+                <col width="11.5%">
+              </colgroup>
+              <tr>
+                <th>발생시간</th>
+                <th>수위</th>
+                <th>장애메시지</th>
+                <th>장애원인</th>
+                <th>최초발생시간</th>
+                <th>해결상태</th>
+                <th>중복횟수</th>
+              </tr>
+              <tr>
+                <td>2022-1-20/18시 35분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-20/18시 35분</td>
+                <td>보수중</td>
+                <td>2회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/17시 05분</td>
+                <td>C</td>
+                <td>충전오류</td>
+                <td>콘센트불량</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>완료</td>
+                <td>1회</td>
+              </tr>
+              <tr>
+                <td>2022-1-20/09시 55분</td>
+                <td>A</td>
+                <td>통신이상</td>
+                <td>중계기오류</td>
+                <td>2022-1-15/18시 35분</td>
+                <td>보수중</td>
+                <td>30회</td>
+              </tr>
+            </table>
+            <div class="pagination">
+              <a class="prev"><img src="img/ico-5.png" alt=""> 이전</a>
+              <p><span>1</span> / <span>4</span></p>
+              <a class="next">다음 <img src="img/ico-6.png" alt=""></a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="js/calendar.js"></script>
+  <script>
+  </script>
+</body>
+</html>
+

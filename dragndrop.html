@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    p { width: 50px; height: 20px;}
+    div {
+      float: left;
+      width: 100px;
+      height: 35px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p draggable="true" ondragstart="drag(event)" id="drag1">1</p>
+  <p draggable="true" ondragstart="drag(event)" id="drag2">2</p>
+  <p draggable="true" ondragstart="drag(event)" id="drag3">3</p>
+  <p draggable="true" ondragstart="drag(event)" id="drag4">4</p>
+  <p draggable="true" ondragstart="drag(event)" id="drag5">5</p>
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+</body>
+</html>

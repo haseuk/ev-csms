@@ -170,5 +170,8 @@ function drag(e) {
 function drop(e) {
   e.preventDefault();
   let data = e.dataTransfer.getData("text");
-  e.target.appendChild(document.getElementById(data));
+  let nodeCopy = document.getElementById(data).cloneNode(true);
+  if(e.target.childNodes.length === 0) {
+    e.target.appendChild(nodeCopy);
+  }
 }

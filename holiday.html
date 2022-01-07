@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <p></p>
+  <script>
+    var xhr = new XMLHttpRequest();
+    var url = 'http://openapi.kasi.re.kr/openapi/service/SpcdeInfoService/get24DivisionsInfo';
+    var queryParams = '?' + encodeURIComponent('ServiceKey') + '=' + 'jx1GvX0M0ZEuxt76OXycQnvFckZpeoQPr74PK1e2F5HtunfNx9nuC%2B7ur4REWTEmzBo4tTcrRsjsldQy3SvS8g%3D%3D';
+    //queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1');
+    //queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('30');
+    queryParams += '&' + encodeURIComponent('solYear') + '=' + encodeURIComponent('2015');
+    //queryParams += '&' + encodeURIComponent('solMonth') + '=' + encodeURIComponent('02');
+    queryParams += '&' + encodeURIComponent('_type') + '=' + encodeURIComponent('json');
+
+    xhr.open('GET', url + queryParams);
+
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        console.log('Status: \n'+this.status);
+        console.log();
+        console.log('nHeaders: \n'+JSON.stringify(this.getAllResponseHeaders()));
+        console.log();
+        console.log('responseText: \n\n'+this.responseText); console.log();
+      }
+    };
+
+    xhr.send('');
+  </script>
+</body>
+</html>

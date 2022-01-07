@@ -959,7 +959,10 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
                     &:hover { .bgc(#f6f9fe); }
                     p { .fs(20); .medium; .tc; .w(170); .ib; .vam; }
                     .drop-box { .wh(170,44); .lh(44); .ib; .vam; .-a(#d6d6d6); .tc; .-box;
-                      p { .fs(16); .medium; color:#fff; .ib; .vam; .m(2); .bgc(#b3cae8); .br(4); .wh(130,30); .lh(30); .tc; }
+                      p { .fs(16); .medium; color:#fff; .ib; .vam; .m(2); .bgc(#b3cae8); .br(4); .wh(130,30); .lh(30); .tc; .rel; overflow: hidden;
+                        &:hover:before { .cnt; .f; .lt; .bgc(#000); .br(4); opacity: 0.5; }
+                        &:hover:after { content:'삭제'; .fs(20); .medium; .abs; .lt; .f; .tc; color:#fff; z-index: 1; }
+                      }
                     }
                     .drop-box + p { .w(260); }
                   }

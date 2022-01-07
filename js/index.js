@@ -173,5 +173,19 @@ function drop(e) {
   let nodeCopy = document.getElementById(data).cloneNode(true);
   if(e.target.childNodes.length === 0) {
     e.target.appendChild(nodeCopy);
+    childCheck();
   }
 }
+let dropItems;
+function childCheck() {
+  dropItems = document.querySelectorAll('.drop-box .drag-item')
+  Array.prototype.forEach.call(dropItems, function(e) {
+    e.addEventListener('click', function() {
+      e.remove()
+    })
+  })
+}
+
+
+
+

@@ -4476,6 +4476,7 @@ input[type="number"]::-webkit-inner-spin-button {
   bottom: auto;
   background-color: #fff;
   border-radius: 0.22222222rem;
+  z-index: 1;
 }
 .contain .wrap article section.dispenser .dispenser-wrap .cell-wrap .cell .garage-wrap .battery:after {
   content: '';

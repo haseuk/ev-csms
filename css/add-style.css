@@ -243,12 +243,13 @@ html {
 }
 .contain .wrap article section .local-area {
   position: absolute;
-  left: 26.66666667rem;
+  left: 50%;
   top: 2.77777778rem;
   right: auto;
   bottom: auto;
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 37.77777778rem;
+  height: 36.44444444rem;
+  margin-left: -18.88888889rem;
   background-color: #f4f4f3;
   z-index: 1;
   display: none;
@@ -262,7 +263,7 @@ html {
   color: #333;
   position: absolute;
   left: 3.61111111rem;
-  top: 1.11111111rem;
+  top: 0rem;
   right: auto;
   bottom: auto;
 }
@@ -296,29 +297,29 @@ html {
   box-sizing: border-box;
 }
 .contain .wrap article section .local-area .region1 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region1.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region2 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region2.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region3 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region3.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region3 .pin {
-  left: 11.66666667rem;
-  top: 29.72222222rem;
+  left: 7.22222222rem;
+  top: 18.33333333rem;
   right: auto;
   bottom: auto;
 }
@@ -329,99 +330,99 @@ html {
   bottom: auto;
 }
 .contain .wrap article section .local-area .region4 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region4.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region5 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region5.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region6 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region6.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region7 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region7.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region8 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region8.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region9 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region9.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region10 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region10.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region11 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region11.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region12 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region12.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region13 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region13.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region14 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region14.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region15 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region15.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region16 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region16.png');
   background-size: contain;
 }
 .contain .wrap article section .local-area .region17 {
-  width: 53.27777778rem;
-  height: 46.11111111rem;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-image: url('../img/add/region17.png');
   background-size: contain;
@@ -445,7 +446,7 @@ html {
   display: inline-block;
 }
 .contain .wrap article section.region-open {
-  min-width: 106.66666667rem;
+  min-width: 91.66666667rem;
 }
 .contain .wrap.add article section.dispenser {
   padding-right: 1.66666667rem;
@@ -840,6 +841,23 @@ html {
 .contain .wrap.add article.aside-on section.dispenser .garage-status {
   margin-left: 14.44444444rem;
   width: 66.7%;
+}
+.contain .wrap.p04 article section.integrated {
+  padding-top: 0.55555556rem;
+}
+.contain .wrap.p04 article section.integrated .chk-wrap .chk-list {
+  height: 19.44444444rem;
+}
+.contain .wrap.p04 article section.integrated .chk-wrap .chk-list ul {
+  height: 12.22222222rem;
+}
+.contain .wrap.p04 article section.integrated .map-wrap {
+  transform: scale(0.8);
+  margin-top: -2.77777778rem;
+  margin-left: auto;
+}
+.contain .wrap.p04 article section.integrated .event-info {
+  margin-top: -2.77777778rem;
 }
 .contain .wrap.p05 article section.integrated {
   height: auto;

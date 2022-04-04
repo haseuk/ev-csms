@@ -48,12 +48,12 @@
 .underline() { text-decoration: underline; }
 .cnt() { content: ''; .block; }
 
-.sv(@v) {@_sv: if((@use-vw),
-if((get-unit(@v) = ~""), unit((@v / @vw * 100), vw), @v),
-if((@use-rem),
-if((get-unit(@v) = ~""), unit(@v / @rem, rem), @v),
-if((get-unit(@v) = ~""), unit(@v, px), @v)))}
-
+.sv(@v) {
+  @_sv: if((isnumber(@v)),
+  if((@use-vw), if((get-unit(@v) = ~""), unit((@v / @vw * 100), vw), @v),
+  if((@use-rem), if((get-unit(@v) = ~""), unit((@v / @rem), rem), @v),
+  if((get-unit(@v) = ~""), unit(@v, px), @v)  )), @v)
+}
 .wsv(@v, @tvw) {
   @_wsv: unit(@v / @tvw * 100, vw)
 }

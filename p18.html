@@ -11,9 +11,7 @@
 </head>
 <body>
   <div class="contain">
-
-    <!-- ######### 12.06 수정 클래스 추가 p18-->
-    <div class="wrap p18">
+    <div class="wrap p18 add"><!-- ################ 22.4.1 add클래스 추가-->
       <header>
         <div class="h-inner">
           <h1><a href="">EV_CSMS</a></h1>
@@ -75,58 +73,185 @@
       </aside>
 
       <article>
+
+
+
+
+<!-- ################ 22.4.1 수정 -->
         <section class="dispenser g-status">
-          <div class="charger-status">
-            <h3>충전기 운영 현황</h3>
-            <ul>
-              <li class="list1"><p>총 충전기</p> <span><s>10</s>대</span></li>
-              <li class="list2"><p>충전중</p> <span><s>2</s>대</span></li>
-              <li class="list3"><p>충전대기</p> <span><s>2</s>대</span></li>
-              <li class="list4"><p>대기중</p> <span><s>7</s>대</span></li>
-              <li class="list5"><p>고장/수리중</p> <span><s>1</s>대</span></li>
-            </ul>
-          </div>
-
-          <div class="charger-status">
-            <h3>전력 사용 현황</h3>
-            <ul>
-              <li class="list1"><p>금일 전력사용량</p> <span><s>800</s>kWh</span></li>
-              <li class="list1"><p>금월 전력사용량</p> <span><s>6,400</s>kWh</span></li>
-              <li class="list1"><p>연간 전력사용량</p> <span><s>18,520</s>kWh</span></li>
-            </ul>
-          </div>
-
-          <img src="img/remark-battery.png" alt="" class="remark-img">
-
           <div class="garage-status">
-            <div class="g-wrap">
-              <!--###### cell에 wearing 들어가면 차 입고 상태-->
-              <!--###### cell에 full 들어가면 충전 완료-->
-              <!--###### cell에 charging 들어가면 충전 중-->
-              <!--###### cell에 repair 들어가면 점검-->
+            <div class="charger-each">
+              <ul>
+                <!-- 버스는 기본적으로 회색버스-->
+                <!-- li태그에 급속충전 fast = 녹색충전기,빨간버스-->
+                <!-- li태그에 충전중 charging = 녹색충전기,녹색버스-->
+                <!-- li태그에 충전대기 standby = 회색충전기,회색버스-->
+                <!-- li태그에 충전완료 complete = 파란충전기,파란버스-->
+                <li class="fast">
+                  <div class="c-cell">
+                    <p>#6</p>
+                    <span></span><!-- 충전기-->
+                  </div>
+                  <div class="bus-status">
+                    <!-- bus클래스에 per20 20%충전중인 녹색버스-->
+                    <!-- bus클래스에 per40 40%충전중인 녹색버스-->
+                    <!-- bus클래스에 per60 60%충전중인 녹색버스-->
+                    <!-- bus클래스에 per80 80%충전중인 녹색버스-->
+                    <!-- bus클래스에 per100 100%충전된 파란버스-->
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
 
+                <li class="standby">
+                  <div class="c-cell">
+                    <p>#5</p>
+                    <span></span><!-- 충전기-->
+                  </div>
+                  <div class="bus-status">
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
 
-              <!--12월 23일 수정 ^^^^^^ cell에 standby 들어가면 충전대기-->
-              <div class="cell wearing full"></div>
-              <div class="cell"></div>
-              <div class="cell standby"></div>
-              <div class="cell"></div>
-              <div class="cell wearing full"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell wearing charging"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell repair"></div>
-              <div class="cell wearing charging"></div>
+                <li class="complete">
+                  <div class="c-cell">
+                    <p>#4</p>
+                    <span></span><!-- 충전기-->
+                  </div>
+                  <div class="bus-status">
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- li태그에 error 충전기상태 빨간색 -->
+                <li class="error">
+                  <div class="c-cell">
+                    <p>#3</p>
+                    <span></span><!-- 충전기(빨간색)-->
+                  </div>
+                  <div class="bus-status">
+                    <div class="bus per20">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus per40">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="repair">
+                  <div class="c-cell">
+                    <p>#2</p>
+                    <span></span><!-- 충전기(빨간색)-->
+                  </div>
+                  <div class="bus-status">
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="charging">
+                  <div class="c-cell">
+                    <p>#1</p>
+                    <span></span><!-- 충전기(빨간색)-->
+                  </div>
+                  <div class="bus-status">
+                    <div class="bus per60">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                    <div class="bus per80">
+                      <span></span><!-- 버스 -->
+                      <p class="num">서울74사<br>2747</p>
+                      <p class="soc">SOC<br>99.9%</p>
+                      <p class="amount">충전량<br>124kWh</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-
-            <!--######도면 들어가는 자리-->
-            <div class="drawing">
-              <img src="img/drawing.png" alt="">
+          </div>
+          <div class="charger-wrap">
+            <div class="charger-inner">
+              <div class="charger-status">
+                <h3>충전기 운영 현황</h3>
+                <ul>
+                  <li class="list1"><p>전체</p> <span><s>10</s>대</span></li>
+                  <li class="list2"><p>충전중</p> <span><s>2</s>대</span></li>
+                  <li class="list3"><p>급속충전</p> <span><s>2</s>대</span></li>
+                  <li class="list4"><p>대기중</p> <span><s>7</s>대</span></li>
+                  <li class="list5"><p>고장/수리</p> <span><s>1</s>대</span></li>
+                  <li class="list6"><p>오프라인</p> <span><s>1</s>대</span></li>
+                </ul>
+              </div>
+              <div class="charger-status">
+                <h3>전력 사용 현황</h3>
+                <ul>
+                  <li class="list1"><p>금일 전력사용량</p> <span><s>800</s>kWh</span></li>
+                  <li class="list1"><p>금월 전력사용량</p> <span><s>6,400</s>kWh</span></li>
+                  <li class="list1"><p>금월 최대수요전력량</p> <span><s>18,520</s>kWh</span></li>
+                  <li class="list1"><p>연간 전력사용량</p> <span><s>18,520</s>kWh</span></li>
+                </ul>
+              </div>
             </div>
+            <img src="img/add/remark2.png" alt="" class="remark">
           </div>
         </section>
+<!-- ################ 22.4.1 수정 끝 -->
+
+
+
+
       </article>
     </div>
   </div>

@@ -12,9 +12,6 @@
 </head>
 <body>
   <div class="contain">
-
-
-    <!-- ######### 12.06 수정 클래스 추가 p04-->
     <div class="wrap p04">
       <header>
         <div class="h-inner">
@@ -475,45 +472,440 @@
             <div class="map-view">
               <div class="map-cell">
 <!--#####지도 디폴트는 베이지색 map 클래스에 oper 클래스 들어가면 파란지도로 변경-->
+                <!-- 인천-->
                 <div class="oper map map1"></div>
+                <!-- 경기-->
                 <div class="oper map map2"></div>
+                <!-- 서울-->
                 <div class="oper map map3"></div>
+                <!-- 강원-->
                 <div class="oper map map4"></div>
+                <!-- 충남-->
                 <div class="oper map map5"></div>
+                <!-- 충북-->
                 <div class="oper map map6"></div>
+                <!-- 대전-->
                 <div class="map map7"></div>
+                <!-- 경북-->
                 <div class="oper map map8"></div>
+                <!-- 전북-->
                 <div class="oper map map9"></div>
+                <!-- 대구-->
                 <div class="map map10"></div>
+                <!-- 전남-->
                 <div class="oper map map11"></div>
+                <!-- 광주-->
                 <div class="oper map map12"></div>
+                <!-- 경남-->
                 <div class="map map13"></div>
+                <!-- 울산-->
                 <div class="map map14"></div>
+                <!-- 부산-->
                 <div class="oper map map15"></div>
+                <!-- 제주-->
                 <div class="oper map map16"></div>
+                <!-- 세종-->
                 <div class="oper map map17"></div>
               </div>
 <!--##### 불릿 기본은 파란색 각 area1 ~ area17 클래스에 check 클래스 들어가면 불릿이 오렌지색으로 변경됨-->
 <!--##### 각 area1 ~ area17 클래스에 not-install 클래스 들어가면 불릿 없음. 텍스트 컬러 회색으로 변경됨-->
-              <span class="area1 check">인천</span>
-              <span class="area2">경기</span>
-              <span class="area3">서울</span>
-              <span class="area4">강원</span>
-              <span class="area5">충남</span>
-              <span class="area6">충북</span>
-              <span class="area7 not-install">대전</span>
-              <span class="area8">경북</span>
-              <span class="area9">전북</span>
-              <span class="area10 not-install">대구</span>
-              <span class="area11">전남</span>
-              <span class="area12">광주</span>
-              <span class="area13 not-install">경남</span>
-              <span class="area14 not-install">울산</span>
-              <span class="area15">부산</span>
-              <span class="area16">제주</span>
-              <span class="area17">세종</span>
+
+
+
+<!-- ################ 22.4.1 수정 -->
+              <span class="area1 check" onclick="mapOpen('region1');" onmouseover="infoShow('area-info1')"  onmouseout="infoHide('area-info1')">인천</span>
+              <span class="area2" onclick="mapOpen('region2');" onmouseover="infoShow('area-info2')"  onmouseout="infoHide('area-info2')">경기</span>
+              <span class="area3" onclick="mapOpen('region3');" onmouseover="infoShow('area-info3')"  onmouseout="infoHide('area-info3')">서울</span>
+              <span class="area4" onclick="mapOpen('region4');" onmouseover="infoShow('area-info4')"  onmouseout="infoHide('area-info4')">강원</span>
+              <span class="area5" onclick="mapOpen('region5');" onmouseover="infoShow('area-info5')"  onmouseout="infoHide('area-info5')">충남</span>
+              <span class="area6" onclick="mapOpen('region6');" onmouseover="infoShow('area-info6')"  onmouseout="infoHide('area-info6')">충북</span>
+              <span class="area7 not-install" onclick="mapOpen('region7');" onmouseover="infoShow('area-info7')"  onmouseout="infoHide('area-info7')">대전</span>
+              <span class="area8" onclick="mapOpen('region8');" onmouseover="infoShow('area-info8')"  onmouseout="infoHide('area-info8')">경북</span>
+              <span class="area9" onclick="mapOpen('region9');" onmouseover="infoShow('area-info9')"  onmouseout="infoHide('area-info9')">전북</span>
+              <span class="area10 not-install" onclick="mapOpen('region10');" onmouseover="infoShow('area-info10')"  onmouseout="infoHide('area-info10')">대구</span>
+              <span class="area11" onclick="mapOpen('region11');" onmouseover="infoShow('area-info11')"  onmouseout="infoHide('area-info11')">전남</span>
+              <span class="area12" onclick="mapOpen('region12');" onmouseover="infoShow('area-info12')"  onmouseout="infoHide('area-info12')">광주</span>
+              <span class="area13 not-install" onclick="mapOpen('region13');" onmouseover="infoShow('area-info13')"  onmouseout="infoHide('area-info13')">경남</span>
+              <span class="area14 not-install" onclick="mapOpen('region14');" onmouseover="infoShow('area-info14')"  onmouseout="infoHide('area-info14')">울산</span>
+              <span class="area15" onclick="mapOpen('region15');" onmouseover="infoShow('area-info15')"  onmouseout="infoHide('area-info15')">부산</span>
+              <span class="area16" onclick="mapOpen('region16');" onmouseover="infoShow('area-info16')"  onmouseout="infoHide('area-info16')">제주</span>
+              <span class="area17" onclick="mapOpen('region17');" onmouseover="infoShow('area-info17')"  onmouseout="infoHide('area-info17')">세종</span>
+<!-- ################ 22.4.1 수정 끝 -->
+
+
+<!-- ################ 22.4.1 추가-->
+              <div class="area-info area-info1">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">인천 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info2">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">경기 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info3">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">서울 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info4">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">강원 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info5">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">충남 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info6">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">충북 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info7">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">대전 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info8">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">경북 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info9">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">전북 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info10">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">대구 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info11">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">전남 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info12">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">광주 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info13">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">경남 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info14">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">울산 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info15">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">부산 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info16">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">제주 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+              <div class="area-info area-info17">
+                <table class="info-table">
+                  <colgroup><col width="110px"><col width="110px"></colgroup>
+                  <tr><th colspan="2">세종 지역정보</th></tr>
+                  <tr><td>충전기대수</td><td>6대</td></tr>
+                  <tr><td>최대수요</td><td>0kW</td></tr>
+                  <tr><td>충전량</td><td>0kWh</td></tr>
+                </table>
+              </div>
+<!-- ################ 22.4.1 추가 끝-->
             </div>
           </div>
+
+<!-- ################ 22.4.1 추가 -->
+          <div class="local-area reg1">
+            <!-- 인천-->
+            <div class="reg region1">
+              <p class="tit">인천 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table1')" onmouseout="infoHide('info-table1')"></span>
+              <table class="info-table info-table1">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">인천 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 경기-->
+            <div class="reg region2">
+              <p class="tit">경기 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table2')" onmouseout="infoHide('info-table2')"></span>
+              <table class="info-table info-table2">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">경기 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 서울-->
+            <div class="reg region3">
+              <p class="tit">서울 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table3')" onmouseout="infoHide('info-table3')"></span>
+              <table class="info-table info-table3">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">서울 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 강원-->
+            <div class="reg region4">
+              <p class="tit">강원 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table4')" onmouseout="infoHide('info-table4')"></span>
+              <table class="info-table info-table4">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">강원 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 충남-->
+            <div class="reg region5">
+              <p class="tit">충남 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table5')" onmouseout="infoHide('info-table5')"></span>
+              <table class="info-table info-table5">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">충남 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 충북-->
+            <div class="reg region6">
+              <p class="tit">충북 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table6')" onmouseout="infoHide('info-table6')"></span>
+              <table class="info-table info-table6">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">충북 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 대전-->
+            <div class="reg region7">
+              <p class="tit">대전 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table7')" onmouseout="infoHide('info-table7')"></span>
+              <table class="info-table info-table7">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">대전 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 경북-->
+            <div class="reg region8">
+              <p class="tit">경북 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table8')" onmouseout="infoHide('info-table8')"></span>
+              <table class="info-table info-table8">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">경북 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 전북-->
+            <div class="reg region9">
+              <p class="tit">전북 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table9')" onmouseout="infoHide('info-table9')"></span>
+              <table class="info-table info-table9">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">전북 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 대구-->
+            <div class="reg region10">
+              <p class="tit">대구 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table10')" onmouseout="infoHide('info-table10')"></span>
+              <table class="info-table info-table10">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">대구 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 전남-->
+            <div class="reg region11">
+              <p class="tit">전남 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table11')" onmouseout="infoHide('info-table11')"></span>
+              <table class="info-table info-table11">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">전남 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 광주-->
+            <div class="reg region12">
+              <p class="tit">광주 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table12')" onmouseout="infoHide('info-table12')"></span>
+              <table class="info-table info-table12">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">광주 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 경남-->
+            <div class="reg region13">
+              <p class="tit">경남 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table13')" onmouseout="infoHide('info-table13')"></span>
+              <table class="info-table info-table13">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">경남 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 울산-->
+            <div class="reg region14">
+              <p class="tit">울산 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table14')" onmouseout="infoHide('info-table14')"></span>
+              <table class="info-table info-table14">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">울산 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 부산-->
+            <div class="reg region15">
+              <p class="tit">부산 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table15')" onmouseout="infoHide('info-table15')"></span>
+              <table class="info-table info-table15">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">부산 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 제주-->
+            <div class="reg region16">
+              <p class="tit">제주 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table16')" onmouseout="infoHide('info-table16')"></span>
+              <table class="info-table info-table16">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">제주 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <!-- 세종-->
+            <div class="reg region17">
+              <p class="tit">세종 지역</p>
+              <span class="pin" onmouseover="infoShow('info-table17')" onmouseout="infoHide('info-table17')"></span>
+              <table class="info-table info-table17">
+                <colgroup><col width="110px"><col width="110px"></colgroup>
+                <tr><th colspan="2">세종 지역정보</th></tr>
+                <tr><td>충전기대수</td><td>6대</td></tr>
+                <tr><td>최대수요</td><td>0kW</td></tr>
+                <tr><td>충전량</td><td>0kWh</td></tr>
+              </table>
+            </div>
+            <a class="reg-close">닫기</a>
+          </div>
+<!-- ################ 22.4.1 추가 끝-->
+
+
+
+
+
+
           <div class="general-info">
             <div class="d-day box">
               <p class="tit">금일 누적 충전량</p>
@@ -726,6 +1118,7 @@
       }
     });
   </script>
+  <script src="js/areaInfo.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,228 @@
+@import "asset";
+@use-rem: true;
+@rem:18;
+
+html { font-size: 18px; font-family: GmarketSans, sans-serif; }
+
+.contain {
+  .wrap {
+    aside {
+      .inner {
+        .depth1 > li { .pl(17)!important; .rel;
+          > a { .pl(25); .-box; }
+          &:after { .cnt; .contain; .abs; .l(11); pointer-events: none; }
+          &:nth-child(1):after { .cnt; .wh(23,20); .bg('../img/add/ico-1.png'); .t(16); }
+          &:nth-child(2):after { .cnt; .wh(24,23); .bg('../img/add/ico-2.png'); .t(14); }
+          &:nth-child(3):after { .cnt; .wh(23,23); .bg('../img/add/ico-3.png'); .t(14); }
+          &:nth-child(4):after { .cnt; .wh(17,22); .bg('../img/add/ico-4.png'); .t(15); }
+          &:nth-child(5):after { .cnt; .wh(20,19); .bg('../img/add/ico-5.png'); .t(15); }
+          &:nth-child(6):after { .cnt; .wh(20,20); .bg('../img/add/ico-6.png'); .t(12); }
+          &:nth-child(7):after { .cnt; .wh(22,24); .bg('../img/add/ico-7.png'); .t(13); }
+        }
+        .depth2 li a i { .mr(14)!important; .-box; }
+      }
+    }
+    article {
+      section {
+        .info-table { .w(220); .t-fix;
+          tr {
+            th { .fs(18); color:#fff; .bgc(#115abc); .medium; .tc; .p(7,0); .-box; }
+            td { .fs(16); color:#333; .p(8,0); .-box; .medium;
+              &:nth-child(1) { .tl; .pl(12); .bgc(#b3cae8); .-b(#fff); }
+              &:nth-child(2) { .tr; .pr(12); .bgc(#fff); .-b(#b3cae8); }
+            }
+            &:last-child td { .-b; }
+          }
+        }
+        .map-wrap {
+          .map-view {
+            span { z-index: 1; .pointer; }
+            .area-info { .abs; .lt; .-a(#115abc); .-box; .br(3); .hide; overflow: hidden; z-index: 2;
+              &.area-info1 { .lt(0,220); }
+              &.area-info2 { .lt(60,240); }
+              &.area-info3 { .lt(0,210); }
+              &.area-info4 { .lt(175,190); }
+              &.area-info5 { .lt(0,400); }
+              &.area-info6 { .lt(115,330); }
+              &.area-info7 { .lt(55,415); }
+              &.area-info8 { .rt(0,400); }
+              &.area-info9 { .lt(30,530); }
+              &.area-info10 { .lt(225,490); }
+              &.area-info11 { .lb; }
+              &.area-info12 { .lb(0,30); }
+              &.area-info13 { .lb(160,65); }
+              &.area-info14 { .rt(0,565); }
+              &.area-info15 { .rb(0,40); }
+              &.area-info16 { .lb(100,0); }
+              &.area-info17 { .lt(25,370); }
+            }
+          }
+        }
+
+        .local-area { .abs; .lt(480,50); .wh(959,830); .bgc(#f4f4f3); z-index: 1; .hide;
+          .reg { .hide;
+            .tit { .fs(24); .medium; color:#333; .abs; .lt(65,20); }
+            .pin { .wh(49,55); .contain('../img/add/pin.png'); .abs; .lt(50%,50%); .ib; .pointer; z-index: 1; }
+            .info-table { .abs; .lt(50%,50%); .mt(60); .hide;
+              tr {
+                th { .tl; .pl(12); .-box; }
+              }
+            }
+          }
+          .region1 { .wh(959,830); .contain('../img/add/region1.png'); }
+          .region2 { .wh(959,830); .contain('../img/add/region2.png'); }
+          .region3 { .wh(959,830); .contain('../img/add/region3.png');
+            .pin { .lt(210,535); }
+            .info-table3 { .lt(210,540); }
+          }
+          .region4 { .wh(959,830); .contain('../img/add/region4.png'); }
+          .region5 { .wh(959,830); .contain('../img/add/region5.png'); }
+          .region6 { .wh(959,830); .contain('../img/add/region6.png'); }
+          .region7 { .wh(959,830); .contain('../img/add/region7.png'); }
+          .region8 { .wh(959,830); .contain('../img/add/region8.png'); }
+          .region9 { .wh(959,830); .contain('../img/add/region9.png'); }
+          .region10 { .wh(959,830); .contain('../img/add/region10.png'); }
+          .region11 { .wh(959,830); .contain('../img/add/region11.png'); }
+          .region12 { .wh(959,830); .contain('../img/add/region12.png'); }
+          .region13 { .wh(959,830); .contain('../img/add/region13.png'); }
+          .region14 { .wh(959,830); .contain('../img/add/region14.png'); }
+          .region15 { .wh(959,830); .contain('../img/add/region15.png'); }
+          .region16 { .wh(959,830); .contain('../img/add/region16.png'); }
+          .region17 { .wh(959,830); .contain('../img/add/region17.png'); }
+          .reg-close { .wh(64,66); .abs; .rt(42,0); .contain('../img/add/close.png'); }
+
+
+          &.open { .ib;
+            .reg.on { .ib; }
+          }
+        }
+        &.region-open { .min-w(1920); }
+      }
+
+    }
+
+    &.add {
+      article {
+        section {
+          &.dispenser { .pr(30); .-box; .clear; .h(1100);
+            .garage-status { .m(30,0,0,101); .w(75%); .br(4);
+              .charger-each { .fs(0);
+                ul {
+                  li { .fs(0); .w(16%); .mr(0.8%); .ib; .vat;
+                    &:last-child { .mr(0); }
+                    .c-cell { .bgc(#fff); .br(4); .wh(100%,174); .tc; .pt(23); .-box; .mb(5);
+                      p { .fs(18); .medium; }
+                      span { .wh(64,79); .contain('../img/add/standby.png'); .ib; .mt(28); }
+                    }
+                    .bus-status {
+                      .bus { .wh(49%,460); .mr(2%); .bgc(#fff); .br(4); .ib; .vat; .tc; .pt(36); .-box;
+                        &:last-child { .mr(0); }
+                        span { .wh(90,246); .ib; .contain('../img/add/standby-bus.png'); }
+                        p { .fs(16); .lh(18); .medium;
+                          &.num { .mt(7); }
+                          &.soc { .mt(17); }
+                          &.amount { .mt(24); }
+                        }
+                      }
+                      .per20 span { .contain('../img/add/per20.gif'); }
+                      .per40 span { .contain('../img/add/per40.gif'); }
+                      .per60 span { .contain('../img/add/per60.gif'); }
+                      .per80 span { .contain('../img/add/per80.gif'); }
+                      .per100 span { .contain('../img/add/complete.gif'); }
+                    }
+                    &.fast {
+                      .c-cell span { .bg('../img/add/charging.png'); }
+                      .bus-status {
+                        .bus {
+                          &:nth-child(1) {
+                            span, p { .hide; }
+                          }
+                          &:nth-child(2) span { .bg('../img/add/fast.gif'); }
+                        }
+                      }
+                    }
+                    &.charging .c-cell span { .bg('../img/add/charging.png'); }
+                    &.complete {
+                      .c-cell {
+                        span { .bg('../img/add/complete.png'); }
+                      }
+                      .bus-status .bus span { .bg('../img/add/complete.gif'); }
+                    }
+                    &.error .c-cell span { .bg('../img/add/error.png'); }
+                    &.repair .c-cell span { .bg('../img/add/repair.png'); }
+                  }
+                }
+              }
+            }
+            .charger-wrap { .fr;
+              .charger-inner { .bgc(#fff); .br(4); .p(15); .mb(10); .-box; overflow: hidden;
+                .charger-status { .m(0); .br(0); .p(0);
+                  &:nth-child(1) { .pb(20); }
+                  h3 { .m(0,0,10,0); }
+                  ul {
+                    li { .pt(0); .h(40); .lh(40);
+                      span s { color:#333; }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.e-power .cont-wrap .inner .genealogy { .wf; overflow: hidden;
+            &:after { .cnt; .wh(651,223); .abs; .lt(204,119); .contain('../img/add/flowing-r.gif'); }
+            .flowing { .abs; .lt(204,119); }
+            .gen-inner { .f;
+              .kepco{ .lt(155,120); z-index: 1;
+                &:before { .hide; }
+              }
+              .cont-box { z-index: 1;
+                &:before, &:after { .hide; }
+                &.cont-box1 { .lt(438,120); }
+                &.cont-box2 { .lt(786,120); }
+              }
+              .flowing-charger { .abs; .lt(163,342);
+                li { .wh(89,250); .ib; .vat; .mr(40); .pt(106); .-box; .rel;
+                  .inner { .wh(89,144); .bgc(#f4f4f3); .br(4); .tc; .pt(32); .-box;
+                    span { .wh(64,79); .contain('../img/add/standby.png'); .ib; .ml(11); }
+                    p { .fs(16); .medium; .mt(5);
+                      &:after { content:'충전대기'; }
+                    }
+                  }
+                  &:last-child { .mr(0); }
+                  &.charging {
+                    .inner {
+                      span { .contain('../img/add/charging.png'); }
+                      p:after { content:'충전중'; }
+                    }
+                  }
+                  &.complete {
+                    .inner {
+                      span { .contain('../img/add/complete.png'); }
+                      p:after { content:'충전완료'; }
+                    }
+                  }
+                  &.repair {
+                    .inner {
+                      span { .contain('../img/add/repair.png'); }
+                      p:after { content:'고장수리'; }
+                    }
+                  }
+                }
+                li.charging {
+                  &:nth-child(1):after { .cnt; .wh(734,106); .contain('../img/add/flow1.gif'); .abs; .lt; }
+                  &:nth-child(2):after { .cnt; .wh(605,106); .contain('../img/add/flow2.gif'); .abs; .lt; }
+                  &:nth-child(3):after { .cnt; .wh(476,106); .contain('../img/add/flow3.gif'); .abs; .lt; }
+                  &:nth-child(4):after { .cnt; .wh(347,106); .contain('../img/add/flow4.gif'); .abs; .lt; }
+                  &:nth-child(5):after { .cnt; .wh(218,106); .contain('../img/add/flow5.gif'); .abs; .lt; }
+                  &:nth-child(6):after { .cnt; .wh(89,106); .contain('../img/add/flow6.gif'); .abs; .lt; }
+                }
+              }
+            }
+          }
+        }
+        &.aside-on section.dispenser .garage-status { .ml(260); .w(66.7%); }
+      }
+    }
+    &.p05 article section.integrated { height: auto; }
+  }
+}

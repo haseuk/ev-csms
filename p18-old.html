@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>EV_CSMS</title>
+</head>
+<body>
+  <div class="contain">
+
+    <!-- ######### 12.06 수정 클래스 추가 p18-->
+    <div class="wrap p18">
+      <header>
+        <div class="h-inner">
+          <h1><a href="">EV_CSMS</a></h1>
+          <h3>차고지 현황</h3>
+          <a class="area-name">서울 보성운수 차고지 정보 ></a>
+          <div class="h-wrap">
+            <div class="time"></div>
+            <div class="top-index">
+              <ul>
+                <li class="user-name"><a><p><s>통합관리</s> 님</p><img src="img/ico-3.png" alt=""></a></li>
+                <li><a href=""><p>설정</p></a></li>
+                <li><a href=""><p>로그아웃</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <aside>
+        <a class="s-btn on">MENU<br>OPEN <img src="img/ico-10.png" alt=""></a>
+        <div class="inner">
+          <div class="top">
+            <p>MENU</p>
+            <a class="close">MENU<br>CLOSE <img src="img/ico-11.png" alt=""></a>
+          </div>
+          <ul class="depth1">
+            <li><a href="p04.html">통합모니터링</a></li>
+            <li><a href="p06.html">통합관리자 설정</a></li>
+            <li class="active"><a href="p18.html">차고지 현황</a></li>
+            <li><a href="p22.html">장비별 세부</a>
+              <ul class="depth2">
+                <li><a href="p22.html"><i></i> 디스펜서</a></li>
+                <li><a href="p23.html"><i></i> 전력</a></li>
+              </ul>
+            </li>
+            <li><a href="p24.html">조회</a>
+              <ul class="depth2">
+                <li><a href="p24.html"><i></i> 차량/충전기별 조회</a></li>
+                <li><a href="p25-1.html"><i></i> 전력 조회</a></li>
+                <li><a href="p26-1.html"><i></i> 요금 조회</a></li>
+              </ul>
+            </li>
+            <li><a href="">보고서</a>
+              <ul class="depth2">
+                <li><a href="p29.html"><i></i> 일간</a></li>
+                <li><a href="p30.html"><i></i> 월간</a></li>
+                <li><a href="p31.html"><i></i> 년간</a></li>
+              </ul>
+            </li>
+            <li><a href="p32.html">설정</a>
+              <ul class="depth2">
+                <li><a href="p32.html"><i></i> 차량 설정</a></li>
+                <li><a href="p34.html"><i></i> 현장 세부 정보 등록</a></li>
+                <li><a href="p36.html"><i></i> 현장 계약 전력 등록</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <article>
+        <section class="dispenser g-status">
+          <div class="charger-status">
+            <h3>충전기 운영 현황</h3>
+            <ul>
+              <li class="list1"><p>총 충전기</p> <span><s>10</s>대</span></li>
+              <li class="list2"><p>충전중</p> <span><s>2</s>대</span></li>
+              <li class="list3"><p>충전대기</p> <span><s>2</s>대</span></li>
+              <li class="list4"><p>대기중</p> <span><s>7</s>대</span></li>
+              <li class="list5"><p>고장/수리중</p> <span><s>1</s>대</span></li>
+            </ul>
+          </div>
+
+          <div class="charger-status">
+            <h3>전력 사용 현황</h3>
+            <ul>
+              <li class="list1"><p>금일 전력사용량</p> <span><s>800</s>kWh</span></li>
+              <li class="list1"><p>금월 전력사용량</p> <span><s>6,400</s>kWh</span></li>
+              <li class="list1"><p>연간 전력사용량</p> <span><s>18,520</s>kWh</span></li>
+            </ul>
+          </div>
+
+          <img src="img/remark-battery.png" alt="" class="remark-img">
+
+          <div class="garage-status">
+            <div class="g-wrap">
+              <!--###### cell에 wearing 들어가면 차 입고 상태-->
+              <!--###### cell에 full 들어가면 충전 완료-->
+              <!--###### cell에 charging 들어가면 충전 중-->
+              <!--###### cell에 repair 들어가면 점검-->
+
+
+              <!--12월 23일 수정 ^^^^^^ cell에 standby 들어가면 충전대기-->
+              <div class="cell wearing full"></div>
+              <div class="cell"></div>
+              <div class="cell standby"></div>
+              <div class="cell"></div>
+              <div class="cell wearing full"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell wearing charging"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell repair"></div>
+              <div class="cell wearing charging"></div>
+            </div>
+
+            <!--######도면 들어가는 자리-->
+            <div class="drawing">
+              <img src="img/drawing.png" alt="">
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
+

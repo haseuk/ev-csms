@@ -12,7 +12,9 @@
 </head>
 <body>
   <div class="contain">
-    <div class="wrap p23 add"><!-- ################ 22.4.1 add클래스 추가-->
+
+    <!-- ######### 12.06 수정 클래스 추가 p23-->
+    <div class="wrap p23">
       <header>
         <div class="h-inner">
           <h1><a href="">EV_CSMS</a></h1>
@@ -105,10 +107,7 @@
           <div class="cont-wrap">
             <div class="inner">
 
-
-              <!-- ################ 22.4.1 수정 -->
               <div class="genealogy">
-                <img src="img/add/flowing.png" alt="" class="flowing">
                 <h3>계통도</h3>
                 <div class="gen-inner">
                   <div class="kepco">
@@ -118,62 +117,63 @@
                     <p class="tit">현재 부하량</p>
                     <p class="txt"><span>1,651.2</span> kWh</p>
                   </div>
-                  <div class="cont-box cont-box2">
-                    <p class="tit">ACB</p>
-                    <p class="txt"><span>580</span> kW</p>
+                  <div class="acb-wrap">
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+
+<!--indicator 클래스에 charging, repair, full 클래스 추가에 따라 충전중, 고장/수리, 충전완료로 바뀜-->
+
+              <!--12월 23일 수정 ^^^^^^ indicator에 standby 들어가면 충전대기-->
+              <!--12월 23일 수정 ^^^^^^ indicator에 waiting 들어가면 대기중-->
+                        <div class="indicator waiting">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator repair">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+                        <div class="indicator standby">
+                          <span class="num">2</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator full">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="acb-box">
+                      <div class="cont-box cont-box3">
+                        <p class="tit">ACB</p>
+                        <p class="txt"><span>580</span> kW</p>
+                      </div>
+                      <div class="acb-status">
+                        <div class="indicator charging">
+                          <span class="num">2</span>
+                          <p class="txt"></p>
+                        </div>
+                        <div class="indicator full">
+                          <span class="num">1</span>
+                          <p class="txt"></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="flowing-charger">
-                    <!-- 기본적으로 회색충전기, 충전대기 텍스트 -->
-                    <!-- li태그에 충전중 charging = 녹색충전기, 충전중텍스트-->
-                    <li class="charging">
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-
-                    <!-- li태그에 충전완료 complete = 파란충전기, 충전완료텍스트-->
-                    <li class="complete">
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-
-                    <!-- li태그에 충전완료 repair = 주황충전기, 고장수리텍스트-->
-                    <li class="repair">
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-
-                    <li class="charging">
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-                    <li>
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-                    <li class="charging">
-                      <div class="inner">
-                        <span></span><!-- 충전기-->
-                        <p></p><!-- 충전상태 -->
-                      </div>
-                    </li>
-                  </ul>
                 </div>
               </div>
-<!-- ################ 22.4.1 수정 끝-->
-
-
-
-
             </div>
             <div class="today-status">
               <div class="cell">

@@ -247,15 +247,16 @@ html {
   top: 2.77777778rem;
   right: auto;
   bottom: auto;
-  width: 37.77777778rem;
+  width: 33.88888889rem;
   height: 36.44444444rem;
-  margin-left: -18.88888889rem;
+  margin-left: -16.94444444rem;
   background-color: #f4f4f3;
   z-index: 1;
   display: none;
 }
 .contain .wrap article section .local-area .reg {
   display: none;
+  background-position-y: center;
 }
 .contain .wrap article section .local-area .reg .tit {
   font-size: 1.33333333rem;
@@ -319,7 +320,7 @@ html {
 }
 .contain .wrap article section .local-area .region3 .pin {
   left: 7.22222222rem;
-  top: 18.33333333rem;
+  top: 21.11111111rem;
   right: auto;
   bottom: auto;
 }
@@ -446,13 +447,14 @@ html {
   display: inline-block;
 }
 .contain .wrap article section.region-open {
-  min-width: 91.66666667rem;
+  min-width: 87.77777778rem;
 }
 .contain .wrap.add article section.dispenser {
-  padding-right: 1.66666667rem;
-  box-sizing: border-box;
+  padding-right: 0rem;
   zoom: 1;
   height: 61.11111111rem;
+  min-width: 106.66666667rem;
+  box-sizing: border-box;
 }
 .contain .wrap.add article section.dispenser:after {
   content: '';
@@ -594,7 +596,11 @@ html {
   background-image: url('../img/add/repair.png');
 }
 .contain .wrap.add article section.dispenser .charger-wrap {
-  float: right;
+  position: absolute;
+  right: 1.66666667rem;
+  top: 1.66666667rem;
+  left: auto;
+  bottom: auto;
 }
 .contain .wrap.add article section.dispenser .charger-wrap .charger-inner {
   background-color: #fff;
@@ -625,6 +631,9 @@ html {
 }
 .contain .wrap.add article section.dispenser .charger-wrap .charger-inner .charger-status ul li span s {
   color: #333;
+}
+.contain .wrap.add article section.e-power {
+  min-height: auto;
 }
 .contain .wrap.add article section.e-power .cont-wrap .inner .genealogy {
   width: 100%;
@@ -853,13 +862,22 @@ html {
 }
 .contain .wrap.p04 article section.integrated .map-wrap {
   transform: scale(0.8);
-  margin-top: -2.77777778rem;
-  margin-left: auto;
+  width: 33.33333333rem;
+  margin-left: -16.66666667rem;
+  position: absolute;
+  left: 50%;
+  top: -2.77777778rem;
+  right: auto;
+  bottom: auto;
+  padding-left: 0rem;
 }
-.contain .wrap.p04 article section.integrated .event-info {
-  margin-top: -2.77777778rem;
+.contain .wrap.p04 article section.integrated .general-info .graph-box .min15 {
+  margin-top: 1.11111111rem;
 }
 .contain .wrap.p05 article section.integrated {
   height: auto;
+}
+.contain .wrap.p18 {
+  min-width: auto!important;
 }
 /*# sourceMappingURL=add-style.css.map */
